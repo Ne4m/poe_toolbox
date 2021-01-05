@@ -107,15 +107,15 @@ namespace Deti_PoE_ToolBox
 
         public void getLeagueInfo()
         {
-            var stuff2 = JsonConvert.DeserializeObject<List<JStructure.LeagueInfo>>(dlapi.getLeagueInfo());
+            var jsonReturn = JsonConvert.DeserializeObject<List<JStructure.LeagueInfo>>(dlapi.getLeagueInfo());
 
 
-            this.league = stuff2[2].name;
+            this.league = jsonReturn[2].name;
 
-            for (int i=0; i<stuff2.Count; i++)
+            for (int i=0; i<jsonReturn.Count; i++)
             {
-                Console.WriteLine(stuff2[i].name);
-                leagueBox.Items.Add(stuff2[i].name);
+                Console.WriteLine(jsonReturn[i].name);
+                leagueBox.Items.Add(jsonReturn[i].name);
             }
             
         }
@@ -123,9 +123,9 @@ namespace Deti_PoE_ToolBox
         public void GetCurrencyPrice(string orbName)
         {
             
-            var stuff2 = JsonConvert.DeserializeObject<JStructure.Currencies>(dlapi.getCurrencyInfo());
+            var jsonReturn = JsonConvert.DeserializeObject<JStructure.Currencies>(dlapi.getCurrencyInfo());
 
-            foreach (var c in stuff2.lines)
+            foreach (var c in jsonReturn.lines)
             {
                 if (c.currencyTypeName == orbName) { orbChaosValue = c.chaosEquivalent; }
             }
@@ -134,9 +134,9 @@ namespace Deti_PoE_ToolBox
 
         public void getChaosExaltedRate()
         {
-            var stuff2 = JsonConvert.DeserializeObject<JStructure.Currencies>(dlapi.getCurrencyInfo());
+            var jsonReturn = JsonConvert.DeserializeObject<JStructure.Currencies>(dlapi.getCurrencyInfo());
 
-            foreach (var c in stuff2.lines)
+            foreach (var c in jsonReturn.lines)
             {
                 if (c.currencyTypeName == "Exalted Orb") { ChaosExaltedRate = c.chaosEquivalent; }
             }
@@ -213,7 +213,7 @@ namespace Deti_PoE_ToolBox
         #region Click Methods Starts
         private void currencyArray_Click(object sender, EventArgs e) // Double.Parse() System.Globalization.NumberStyles.AllowDecimalPoint, System.Globalization.NumberFormatInfo.InvariantInfo String to double
         {
-            var stuff2 = JsonConvert.DeserializeObject<JStructure.Currencies>(dlapi.getCurrencyInfo());
+            var jsonReturn = JsonConvert.DeserializeObject<JStructure.Currencies>(dlapi.getCurrencyInfo());
             richTextBox1.Clear();
             richTextBox1.Width = 667;
             testBox.Visible = false;
@@ -224,7 +224,7 @@ namespace Deti_PoE_ToolBox
             listView1.Columns.Add("Chaos Value");
             listView1.Columns.Add("Exalted Value");
 
-            foreach (var c in stuff2.lines)
+            foreach (var c in jsonReturn.lines)
             {
                 //if (c.currencyTypeName == "Exalted Orb") { ChaosExaltedRate = c.chaosEquivalent; }
                 richTextBox1.Text = richTextBox1.Text + c.currencyTypeName + ": " + c.chaosEquivalent + " c / " + String.Format("{0:0.00}", (c.chaosEquivalent/ ChaosExaltedRate)) + " Ex\n";
@@ -245,7 +245,7 @@ namespace Deti_PoE_ToolBox
 
         private void fragmentsArray_Click(object sender, EventArgs e)
         {
-            var stuff2 = JsonConvert.DeserializeObject<JStructure.Fragments>(dlapi.getFragmentsInfo());
+            var jsonReturn = JsonConvert.DeserializeObject<JStructure.Fragments>(dlapi.getFragmentsInfo());
             richTextBox1.Clear();
             richTextBox1.Width = 667;
             testBox.Visible = false;
@@ -256,7 +256,7 @@ namespace Deti_PoE_ToolBox
             listView1.Columns.Add("Chaos Value");
             listView1.Columns.Add("Exalted Value");               
 
-            foreach (var c in stuff2.lines)
+            foreach (var c in jsonReturn.lines)
             {
                 richTextBox1.Text = richTextBox1.Text + c.currencyTypeName + ": " + c.chaosEquivalent + " c / " + String.Format("{0:0.00}", (c.chaosEquivalent / ChaosExaltedRate)) + " Ex\n";
 
@@ -274,7 +274,7 @@ namespace Deti_PoE_ToolBox
 
         private void fossilsArray_Click(object sender, EventArgs e)
         {
-            var stuff2 = JsonConvert.DeserializeObject<JStructure.Fossils>(dlapi.getFossilsInfo());
+            var jsonReturn = JsonConvert.DeserializeObject<JStructure.Fossils>(dlapi.getFossilsInfo());
             richTextBox1.Clear();
             richTextBox1.Width = 667;
             testBox.Visible = false;
@@ -286,7 +286,7 @@ namespace Deti_PoE_ToolBox
             listView1.Columns.Add("Exalted Value");
             listView1.Columns.Add("Description"); 
 
-            foreach (var c in stuff2.lines)
+            foreach (var c in jsonReturn.lines)
             {
                 richTextBox1.Text = richTextBox1.Text + c.name + ": " + c.chaosValue + " c / " + String.Format("{0:0.00}", c.exaltedValue) + " Ex\n";
 
@@ -305,7 +305,7 @@ namespace Deti_PoE_ToolBox
 
         private void resonatorsArray_Click(object sender, EventArgs e)
         {
-            var stuff2 = JsonConvert.DeserializeObject<JStructure.Resonators>(dlapi.getResonatorsInfo());
+            var jsonReturn = JsonConvert.DeserializeObject<JStructure.Resonators>(dlapi.getResonatorsInfo());
             richTextBox1.Clear();
             richTextBox1.Width = 667;
             testBox.Visible = false;
@@ -316,7 +316,7 @@ namespace Deti_PoE_ToolBox
             listView1.Columns.Add("Chaos Value");
             listView1.Columns.Add("Exalted Value");
 
-            foreach (var c in stuff2.lines)
+            foreach (var c in jsonReturn.lines)
             {
                 richTextBox1.Text = richTextBox1.Text + c.name + ": " + c.chaosValue + " c / " + String.Format("{0:0.00}", c.exaltedValue) + " Ex\n";
 
@@ -334,7 +334,7 @@ namespace Deti_PoE_ToolBox
     
         private void essencesArray_Click(object sender, EventArgs e)
         {
-            var stuff2 = JsonConvert.DeserializeObject<JStructure.Essences>(dlapi.getEssencesInfo());
+            var jsonReturn = JsonConvert.DeserializeObject<JStructure.Essences>(dlapi.getEssencesInfo());
             richTextBox1.Clear();
             richTextBox1.Width = 667;
             testBox.Visible = false;
@@ -346,7 +346,7 @@ namespace Deti_PoE_ToolBox
             listView1.Columns.Add("Exalted Value");
             listView1.Columns.Add("Description");
 
-            foreach (var c in stuff2.lines)
+            foreach (var c in jsonReturn.lines)
             {
                 richTextBox1.Text = richTextBox1.Text + c.name + ": " + c.chaosValue + " c / " + String.Format("{0:0.00}", c.exaltedValue) + " Ex\n";
 
@@ -364,7 +364,7 @@ namespace Deti_PoE_ToolBox
 
         private void cardsArray_Click(object sender, EventArgs e)
         {
-            var stuff2 = JsonConvert.DeserializeObject<JStructure.Cards>(dlapi.getCardsInfo());
+            var jsonReturn = JsonConvert.DeserializeObject<JStructure.Cards>(dlapi.getCardsInfo());
             richTextBox1.Clear();
             richTextBox1.Width = 667;
             testBox.Visible = false;
@@ -376,7 +376,7 @@ namespace Deti_PoE_ToolBox
             listView1.Columns.Add("Chaos Value");
             listView1.Columns.Add("Exalted Value");
 
-            foreach (var c in stuff2.lines)
+            foreach (var c in jsonReturn.lines)
             {
                 richTextBox1.Text = richTextBox1.Text + c.name + ": " + c.chaosValue + " c / " + String.Format("{0:0.00}", c.exaltedValue) + " Ex\n";
 
@@ -394,7 +394,7 @@ namespace Deti_PoE_ToolBox
 
         private void propheciesArray_Click(object sender, EventArgs e)
         {
-            var stuff2 = JsonConvert.DeserializeObject<JStructure.Prophecies>(dlapi.getPropheciesInfo());
+            var jsonReturn = JsonConvert.DeserializeObject<JStructure.Prophecies>(dlapi.getPropheciesInfo());
             richTextBox1.Clear();
             richTextBox1.Width = 667;
             testBox.Visible = false;
@@ -406,7 +406,7 @@ namespace Deti_PoE_ToolBox
             listView1.Columns.Add("Exalted Value");
             listView1.Columns.Add("Description");
 
-            foreach (var c in stuff2.lines)
+            foreach (var c in jsonReturn.lines)
             {
                 richTextBox1.Text = richTextBox1.Text + c.name + ": " + c.chaosValue + " c / " + String.Format("{0:0.00}", c.exaltedValue) + " Ex\n";
 
@@ -425,7 +425,7 @@ namespace Deti_PoE_ToolBox
 
         private void gemsArray_Click(object sender, EventArgs e)
         {
-            var stuff2 = JsonConvert.DeserializeObject<JStructure.Gems>(dlapi.getGemsInfo());
+            var jsonReturn = JsonConvert.DeserializeObject<JStructure.Gems>(dlapi.getGemsInfo());
             richTextBox1.Clear();
             richTextBox1.Width = 379;
             testBox.Visible = true;
@@ -440,7 +440,7 @@ namespace Deti_PoE_ToolBox
             listView1.Columns.Add("Exalted Value");
 
 
-            foreach (var c in stuff2.lines)
+            foreach (var c in jsonReturn.lines)
             {
 
              /*   if (c.variant == "21/23c")
@@ -472,7 +472,7 @@ namespace Deti_PoE_ToolBox
 
         private void scarabsTypesArray_Click(object sender, EventArgs e)
         {
-            var stuff2 = JsonConvert.DeserializeObject<JStructure.Scarabs>(dlapi.getScarabInfo());
+            var jsonReturn = JsonConvert.DeserializeObject<JStructure.Scarabs>(dlapi.getScarabInfo());
             richTextBox1.Clear();
             richTextBox1.Width = 667;
             testBox.Visible = false;
@@ -484,7 +484,7 @@ namespace Deti_PoE_ToolBox
             listView1.Columns.Add("Exalted Value");
             listView1.Columns.Add("Description");
 
-            foreach (var c in stuff2.lines)
+            foreach (var c in jsonReturn.lines)
             {
                 richTextBox1.Text = richTextBox1.Text + c.name + ": " + c.chaosValue + " c / " + String.Format("{0:0.00}", c.exaltedValue) + " Ex\n";
 
@@ -503,7 +503,7 @@ namespace Deti_PoE_ToolBox
 
         private void helmEnchantsArray_Click(object sender, EventArgs e)
         {
-            var stuff2 = JsonConvert.DeserializeObject<JStructure.HelmEnchants>(dlapi.getEnchantsInfo());
+            var jsonReturn = JsonConvert.DeserializeObject<JStructure.HelmEnchants>(dlapi.getEnchantsInfo());
             richTextBox1.Clear();
             richTextBox1.Width = 667;
             testBox.Visible = false;
@@ -514,7 +514,7 @@ namespace Deti_PoE_ToolBox
             listView1.Columns.Add("Chaos Value");
             listView1.Columns.Add("Exalted Value");
 
-            foreach (var c in stuff2.lines)
+            foreach (var c in jsonReturn.lines)
             {
                 richTextBox1.Text = richTextBox1.Text + c.name + ": " + c.chaosValue + " c / " + String.Format("{0:0.00}", c.exaltedValue) + " Ex\n";
 
@@ -531,7 +531,7 @@ namespace Deti_PoE_ToolBox
 
         private void uniqueMapsArray_Click(object sender, EventArgs e)
         {
-            var stuff2 = JsonConvert.DeserializeObject<JStructure.UniqueMaps>(dlapi.getUniqueMapsInfo());
+            var jsonReturn = JsonConvert.DeserializeObject<JStructure.UniqueMaps>(dlapi.getUniqueMapsInfo());
             richTextBox1.Clear();
             richTextBox1.Width = 667;
             testBox.Visible = false;
@@ -543,7 +543,7 @@ namespace Deti_PoE_ToolBox
             listView1.Columns.Add("Chaos Value");
             listView1.Columns.Add("Exalted Value");
 
-            foreach (var c in stuff2.lines)
+            foreach (var c in jsonReturn.lines)
             {
                 richTextBox1.Text = richTextBox1.Text + "T" + c.mapTier + " " + c.name + " " + c.chaosValue + " c / " + String.Format("{0:0.00}", c.exaltedValue) + " Ex\n";
 
@@ -563,7 +563,7 @@ namespace Deti_PoE_ToolBox
 
         private void mapsArray_Click(object sender, EventArgs e)
         {
-            var stuff2 = JsonConvert.DeserializeObject<JStructure.Maps>(dlapi.getMapsInfo());
+            var jsonReturn = JsonConvert.DeserializeObject<JStructure.Maps>(dlapi.getMapsInfo());
             richTextBox1.Clear();
             richTextBox1.Width = 667;
             testBox.Visible = false;
@@ -575,7 +575,7 @@ namespace Deti_PoE_ToolBox
             listView1.Columns.Add("Chaos Value");
             listView1.Columns.Add("Exalted Value");
 
-            foreach (var c in stuff2.lines)
+            foreach (var c in jsonReturn.lines)
             {
                 richTextBox1.Text = richTextBox1.Text + "T" + c.mapTier + " " + c.name + " " + c.chaosValue + " c / " + String.Format("{0:0.00}", c.exaltedValue) + " Ex\n";
 
@@ -600,7 +600,7 @@ namespace Deti_PoE_ToolBox
 
         private void jewelsArray_Click(object sender, EventArgs e)
         {
-            var stuff2 = JsonConvert.DeserializeObject<JStructure.Jewels>(dlapi.getJewelsInfo());
+            var jsonReturn = JsonConvert.DeserializeObject<JStructure.Jewels>(dlapi.getJewelsInfo());
             richTextBox1.Clear();
             richTextBox1.Width = 667;
             testBox.Visible = false;
@@ -611,7 +611,7 @@ namespace Deti_PoE_ToolBox
             listView1.Columns.Add("Chaos Value");
             listView1.Columns.Add("Exalted Value");
 
-            foreach (var c in stuff2.lines)
+            foreach (var c in jsonReturn.lines)
             {
                 richTextBox1.Text = richTextBox1.Text + c.name + ": " + c.chaosValue + " c / " + String.Format("{0:0.00}", c.exaltedValue) + " Ex\n";
 
@@ -628,7 +628,7 @@ namespace Deti_PoE_ToolBox
 
         private void flasksArray_Click(object sender, EventArgs e)
         {
-            var stuff2 = JsonConvert.DeserializeObject<JStructure.Flasks>(dlapi.getFlasksInfo());
+            var jsonReturn = JsonConvert.DeserializeObject<JStructure.Flasks>(dlapi.getFlasksInfo());
             richTextBox1.Clear();
             richTextBox1.Width = 667;
             testBox.Visible = false;
@@ -641,7 +641,7 @@ namespace Deti_PoE_ToolBox
             listView1.Columns.Add("Exalted Value");
 
 
-            foreach (var c in stuff2.lines)
+            foreach (var c in jsonReturn.lines)
             {
                 if (c.itemClass == 9) // RELIC ITEMCLASS ID
                 {
@@ -667,7 +667,7 @@ namespace Deti_PoE_ToolBox
 
         private void weaponsArray_Click(object sender, EventArgs e)
         {
-            var stuff2 = JsonConvert.DeserializeObject<JStructure.Weapons>(dlapi.getWeaponsInfo());
+            var jsonReturn = JsonConvert.DeserializeObject<JStructure.Weapons>(dlapi.getWeaponsInfo());
             richTextBox1.Clear();
             richTextBox1.Width = 379;
             testBox.Visible = true;
@@ -689,7 +689,7 @@ namespace Deti_PoE_ToolBox
 
                 if (newinput == "Definitely6")
                 {
-                    foreach (var c in stuff2.lines)
+                    foreach (var c in jsonReturn.lines)
                     {
                         if (c.links == 6)
                         {
@@ -705,7 +705,7 @@ namespace Deti_PoE_ToolBox
                 }
                 if (newinput == "Not6")
                 {
-                    foreach (var c in stuff2.lines)
+                    foreach (var c in jsonReturn.lines)
                     {
                         if (c.links < 6)
                         {
@@ -756,7 +756,7 @@ namespace Deti_PoE_ToolBox
 
         private void armoursArray_Click(object sender, EventArgs e)
         {
-            var stuff2 = JsonConvert.DeserializeObject<JStructure.Armours>(dlapi.getArmoursInfo());
+            var jsonReturn = JsonConvert.DeserializeObject<JStructure.Armours>(dlapi.getArmoursInfo());
             richTextBox1.Clear();
             richTextBox1.Width = 379;
             testBox.Visible = true;
@@ -778,7 +778,7 @@ namespace Deti_PoE_ToolBox
 
                 if (newinput == "Definitely6")
                 {
-                    foreach (var c in stuff2.lines)
+                    foreach (var c in jsonReturn.lines)
                     {
                         if (c.links == 6)
                         {
@@ -794,7 +794,7 @@ namespace Deti_PoE_ToolBox
                 }
                 if (newinput == "Not6")
                 {
-                    foreach (var c in stuff2.lines)
+                    foreach (var c in jsonReturn.lines)
                     {
                         if (c.links < 6)
                         {
@@ -826,7 +826,7 @@ namespace Deti_PoE_ToolBox
 
         private void accessoryArray_Click(object sender, EventArgs e)
         {
-            var stuff2 = JsonConvert.DeserializeObject<JStructure.Accessories>(dlapi.getAccessoryInfo());
+            var jsonReturn = JsonConvert.DeserializeObject<JStructure.Accessories>(dlapi.getAccessoryInfo());
             richTextBox1.Clear();
             richTextBox1.Width = 667;
             testBox.Visible = false;
@@ -838,7 +838,7 @@ namespace Deti_PoE_ToolBox
             listView1.Columns.Add("Chaos Value");
             listView1.Columns.Add("Exalted Value");
 
-            foreach (var c in stuff2.lines)
+            foreach (var c in jsonReturn.lines)
             {
                 if (c.itemClass == 9) // RELIC ITEMCLASS ID
                 {
@@ -1033,7 +1033,7 @@ namespace Deti_PoE_ToolBox
                 {
                     if (item.Text.ToLower().Contains(txt_Search.Text.ToLower()))
                     {
-                        item.Selected = true;
+                        //item.Selected = true;
                     }
                     else
                     {
@@ -1101,7 +1101,7 @@ namespace Deti_PoE_ToolBox
 
         private void beastsArray_Click(object sender, EventArgs e)
         {
-            var stuff2 = JsonConvert.DeserializeObject<JStructure.Beasts>(dlapi.getBeastsInfo());
+            var jsonReturn = JsonConvert.DeserializeObject<JStructure.Beasts>(dlapi.getBeastsInfo());
             richTextBox1.Clear();
             richTextBox1.Width = 667;
             testBox.Visible = false;
@@ -1113,7 +1113,7 @@ namespace Deti_PoE_ToolBox
             listView1.Columns.Add("Exalted Value");
             listView1.Columns.Add("Description");
 
-            foreach (var c in stuff2.lines)
+            foreach (var c in jsonReturn.lines)
             {
                 richTextBox1.Text = richTextBox1.Text + c.name + ": " + c.chaosValue + " c / " + String.Format("{0:0.00}", c.exaltedValue) + " Ex\n";
 
@@ -1132,7 +1132,7 @@ namespace Deti_PoE_ToolBox
         private void uniqueBeastsArray_Click(object sender, EventArgs e)
         {
             //ImportAsync();
-            var stuff2 = JsonConvert.DeserializeObject<JStructure.uniqueBeasts>(dlapi.getUniqueBeastsInfo());
+            var jsonReturn = JsonConvert.DeserializeObject<JStructure.uniqueBeasts>(dlapi.getUniqueBeastsInfo());
             richTextBox1.Clear();
             richTextBox1.Width = 667;
             testBox.Visible = false;
@@ -1144,7 +1144,7 @@ namespace Deti_PoE_ToolBox
             listView1.Columns.Add("Exalted Value");
             listView1.Columns.Add("Description");
 
-            foreach (var c in stuff2.lines)
+            foreach (var c in jsonReturn.lines)
             {
                 richTextBox1.Text = richTextBox1.Text + c.name + ": " + c.chaosValue + " c / " + String.Format("{0:0.00}", c.exaltedValue) + " Ex\n";
 
@@ -1199,7 +1199,7 @@ namespace Deti_PoE_ToolBox
 
         private void incubatorsArray_Click(object sender, EventArgs e)
         {
-            var stuff2 = JsonConvert.DeserializeObject<JStructure.Scarabs>(dlapi.getIncubatorInfo());
+            var jsonReturn = JsonConvert.DeserializeObject<JStructure.Scarabs>(dlapi.getIncubatorInfo());
             richTextBox1.Clear();
             richTextBox1.Width = 667;
             testBox.Visible = false;
@@ -1211,7 +1211,7 @@ namespace Deti_PoE_ToolBox
             listView1.Columns.Add("Exalted Value");
             listView1.Columns.Add("Description"); //                 test.SubItems.Add(c.explicitModifiers[0].text);
 
-            foreach (var c in stuff2.lines)
+            foreach (var c in jsonReturn.lines)
             {
                 richTextBox1.Text = richTextBox1.Text + c.name + ": " + c.chaosValue + " c / " + String.Format("{0:0.00}", c.exaltedValue) + " Ex\n";
 
@@ -1230,7 +1230,7 @@ namespace Deti_PoE_ToolBox
 
         private void oilsTypesArray_Click(object sender, EventArgs e)
         {
-            var stuff2 = JsonConvert.DeserializeObject<JStructure.Scarabs>(dlapi.getOilsInfo());
+            var jsonReturn = JsonConvert.DeserializeObject<JStructure.Scarabs>(dlapi.getOilsInfo());
             richTextBox1.Clear();
             richTextBox1.Width = 667;
             testBox.Visible = false;
@@ -1242,7 +1242,7 @@ namespace Deti_PoE_ToolBox
             listView1.Columns.Add("Exalted Value");
             //  listView1.Columns.Add("Description");                 test.SubItems.Add(c.explicitModifiers[0].text);
 
-            foreach (var c in stuff2.lines)
+            foreach (var c in jsonReturn.lines)
             {
                 richTextBox1.Text = richTextBox1.Text + c.name + ": " + c.chaosValue + " c / " + String.Format("{0:0.00}", c.exaltedValue) + " Ex\n";
 
@@ -1261,7 +1261,7 @@ namespace Deti_PoE_ToolBox
 
         private void deliriumOrbArray_Click(object sender, EventArgs e)
         {
-            var stuff2 = JsonConvert.DeserializeObject<JStructure.Scarabs>(dlapi.getDeliriumOrbInfo());
+            var jsonReturn = JsonConvert.DeserializeObject<JStructure.Scarabs>(dlapi.getDeliriumOrbInfo());
             richTextBox1.Clear();
             richTextBox1.Width = 667;
             testBox.Visible = false;
@@ -1273,7 +1273,7 @@ namespace Deti_PoE_ToolBox
             listView1.Columns.Add("Exalted Value");
             listView1.Columns.Add("Description");
 
-            foreach (var c in stuff2.lines)
+            foreach (var c in jsonReturn.lines)
             {
                 richTextBox1.Text = richTextBox1.Text + c.name + ": " + c.chaosValue + " c / " + String.Format("{0:0.00}", c.exaltedValue) + " Ex\n";
 
@@ -1481,7 +1481,7 @@ namespace Deti_PoE_ToolBox
 
         private void seedsArray_Click(object sender, EventArgs e)
         {
-            var stuff2 = JsonConvert.DeserializeObject<JStructure.Seeds>(dlapi.getSeedInfo());
+            var jsonReturn = JsonConvert.DeserializeObject<JStructure.Seeds>(dlapi.getSeedInfo());
             richTextBox1.Clear();
             richTextBox1.Width = 667;
             testBox.Visible = false;
@@ -1504,7 +1504,7 @@ namespace Deti_PoE_ToolBox
 
                 if (newinput == "less")
                 {
-                    foreach (var c in stuff2.lines)
+                    foreach (var c in jsonReturn.lines)
                     {
                         if (c.levelRequired < 76)
                         { 
@@ -1522,7 +1522,7 @@ namespace Deti_PoE_ToolBox
                 }
                 else
                 {
-                    foreach (var c in stuff2.lines)
+                    foreach (var c in jsonReturn.lines)
                     {
                         if (c.levelRequired >= 76)
                         {

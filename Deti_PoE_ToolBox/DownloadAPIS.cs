@@ -2,23 +2,29 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Deti_PoE_ToolBox
 {
+
 
     class DownloadAPIS
     {
 
 
+
         public string league;
+        private string info;
+       
 
         public string getLeagueInfo()
         {
             using (var webClient = new System.Net.WebClient())
             {
-                string info = webClient.DownloadString("https://api.poe.watch/leagues");
+                info = webClient.DownloadString("https://api.poe.watch/leagues");
                 return info;
             }
         }
@@ -29,8 +35,10 @@ namespace Deti_PoE_ToolBox
 
             using (var webClient = new System.Net.WebClient())
             {
-                string info = webClient.DownloadString("https://poe.ninja/api/Data/currencyoverview?league=" + league + "&type=Currency");
+
+                info = webClient.DownloadString("https://poe.ninja/api/Data/currencyoverview?league=" + league + "&type=Currency");
                 return info;
+
             }
         }
 
@@ -38,7 +46,7 @@ namespace Deti_PoE_ToolBox
         {
             using (var webClient = new System.Net.WebClient())
             {
-                string info = webClient.DownloadString("https://poe.ninja/api/data/currencyoverview?type=Fragment&league=" + league);
+                info = webClient.DownloadString("https://poe.ninja/api/data/currencyoverview?type=Fragment&league=" + league);
                 return info;
             }
         }
@@ -47,7 +55,15 @@ namespace Deti_PoE_ToolBox
         {
             using (var webClient = new System.Net.WebClient())
             {
-                string info = webClient.DownloadString("https://poe.ninja/api/data/itemoverview?type=Seed&league=" + league);
+                try
+                {
+                    info = webClient.DownloadString("https://poe.ninja/api/data/itemoverview?type=Seed&league=" + league);
+                }
+                catch(WebException ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+
                 return info;
             }
         }
@@ -56,7 +72,7 @@ namespace Deti_PoE_ToolBox
         {
             using (var webClient = new System.Net.WebClient())
             {
-                string info = webClient.DownloadString("https://poe.ninja/api/data/itemoverview?type=DeliriumOrb&league=" + league);
+                info = webClient.DownloadString("https://poe.ninja/api/data/itemoverview?type=DeliriumOrb&league=" + league);
                 return info;
             }
         }
@@ -65,7 +81,7 @@ namespace Deti_PoE_ToolBox
         {
             using (var webClient = new System.Net.WebClient())
             {
-                string info = webClient.DownloadString("https://poe.ninja/api/data/itemoverview?type=Oil&league=" + league);
+                info = webClient.DownloadString("https://poe.ninja/api/data/itemoverview?type=Oil&league=" + league);
                 return info;
             }
         }
@@ -74,7 +90,7 @@ namespace Deti_PoE_ToolBox
         {
             using (var webClient = new System.Net.WebClient())
             {
-                string info = webClient.DownloadString("https://poe.ninja/api/data/itemoverview?type=Incubator&league=" + league);
+                info = webClient.DownloadString("https://poe.ninja/api/data/itemoverview?type=Incubator&league=" + league);
                 return info;
             }
         }
@@ -83,7 +99,7 @@ namespace Deti_PoE_ToolBox
         {
             using (var webClient = new System.Net.WebClient())
             {
-                string info = webClient.DownloadString("https://poe.ninja/api/data/itemoverview?type=Scarab&league=" + league);
+                info = webClient.DownloadString("https://poe.ninja/api/data/itemoverview?type=Scarab&league=" + league);
                 return info;
             }
         }
@@ -92,7 +108,7 @@ namespace Deti_PoE_ToolBox
         {
             using (var webClient = new System.Net.WebClient())
             {
-                string info = webClient.DownloadString("https://poe.ninja/api/data/itemoverview?type=Fossil&league=" + league);
+                info = webClient.DownloadString("https://poe.ninja/api/data/itemoverview?type=Fossil&league=" + league);
                 return info;
             }
         }
@@ -101,7 +117,7 @@ namespace Deti_PoE_ToolBox
         {
             using (var webClient = new System.Net.WebClient())
             {
-                string info = webClient.DownloadString("https://poe.ninja/api/data/itemoverview?type=Resonator&league=" + league);
+                info = webClient.DownloadString("https://poe.ninja/api/data/itemoverview?type=Resonator&league=" + league);
                 return info;
             }
         }
@@ -110,7 +126,7 @@ namespace Deti_PoE_ToolBox
         {
             using (var webClient = new System.Net.WebClient())
             {
-                string info = webClient.DownloadString("https://poe.ninja/api/data/itemoverview?type=Essence&league=" + league);
+                info = webClient.DownloadString("https://poe.ninja/api/data/itemoverview?type=Essence&league=" + league);
                 return info;
             }
         }
@@ -119,7 +135,7 @@ namespace Deti_PoE_ToolBox
         {
             using (var webClient = new System.Net.WebClient())
             {
-                string info = webClient.DownloadString("https://poe.ninja/api/data/itemoverview?type=DivinationCard&league=" + league);
+                info = webClient.DownloadString("https://poe.ninja/api/data/itemoverview?type=DivinationCard&league=" + league);
                 return info;
             }
         }
@@ -128,7 +144,7 @@ namespace Deti_PoE_ToolBox
         {
             using (var webClient = new System.Net.WebClient())
             {
-                string info = webClient.DownloadString("https://poe.ninja/api/data/itemoverview?type=Prophecy&league=" + league);
+                info = webClient.DownloadString("https://poe.ninja/api/data/itemoverview?type=Prophecy&league=" + league);
                 return info;
             }
         }
@@ -137,7 +153,7 @@ namespace Deti_PoE_ToolBox
         {
             using (var webClient = new System.Net.WebClient())
             {
-                string info = webClient.DownloadString("https://poe.ninja/api/data/itemoverview?type=SkillGem&league=" + league);
+                info = webClient.DownloadString("https://poe.ninja/api/data/itemoverview?type=SkillGem&league=" + league);
                 return info;
             }
         }
@@ -146,7 +162,7 @@ namespace Deti_PoE_ToolBox
         {
             using (var webClient = new System.Net.WebClient())
             {
-                string info = webClient.DownloadString("https://poe.ninja/api/data/itemoverview?type=BaseType&league=" + league);
+                info = webClient.DownloadString("https://poe.ninja/api/data/itemoverview?type=BaseType&league=" + league);
                 return info;
             }
         }
@@ -155,7 +171,7 @@ namespace Deti_PoE_ToolBox
         {
             using (var webClient = new System.Net.WebClient())
             {
-                string info = webClient.DownloadString("https://poe.ninja/api/data/itemoverview?type=HelmetEnchant&league=" + league);
+                info = webClient.DownloadString("https://poe.ninja/api/data/itemoverview?type=HelmetEnchant&league=" + league);
                 return info;
             }
         }
@@ -164,7 +180,7 @@ namespace Deti_PoE_ToolBox
         {
             using (var webClient = new System.Net.WebClient())
             {
-                string info = webClient.DownloadString("https://poe.ninja/api/data/itemoverview?type=UniqueMap&league=" + league);
+                info = webClient.DownloadString("https://poe.ninja/api/data/itemoverview?type=UniqueMap&league=" + league);
                 return info;
             }
         }
@@ -173,7 +189,7 @@ namespace Deti_PoE_ToolBox
         {
             using (var webClient = new System.Net.WebClient())
             {
-                string info = webClient.DownloadString("https://poe.ninja/api/data/itemoverview?type=Map&league=" + league);
+                info = webClient.DownloadString("https://poe.ninja/api/data/itemoverview?type=Map&league=" + league);
                 return info;
             }
         }
@@ -182,7 +198,7 @@ namespace Deti_PoE_ToolBox
         {
             using (var webClient = new System.Net.WebClient())
             {
-                string info = webClient.DownloadString("https://poe.ninja/api/data/itemoverview?type=UniqueJewel&league=" + league);
+                info = webClient.DownloadString("https://poe.ninja/api/data/itemoverview?type=UniqueJewel&league=" + league);
                 return info;
             }
         }
@@ -191,7 +207,7 @@ namespace Deti_PoE_ToolBox
         {
             using (var webClient = new System.Net.WebClient())
             {
-                string info = webClient.DownloadString("https://poe.ninja/api/data/itemoverview?type=UniqueFlask&league=" + league);
+                info = webClient.DownloadString("https://poe.ninja/api/data/itemoverview?type=UniqueFlask&league=" + league);
                 return info;
             }
         }
@@ -200,7 +216,7 @@ namespace Deti_PoE_ToolBox
         {
             using (var webClient = new System.Net.WebClient())
             {
-                string info = webClient.DownloadString("https://poe.ninja/api/data/itemoverview?type=UniqueWeapon&league=" + league);
+                info = webClient.DownloadString("https://poe.ninja/api/data/itemoverview?type=UniqueWeapon&league=" + league);
                 return info;
             }
         }
@@ -209,7 +225,7 @@ namespace Deti_PoE_ToolBox
         {
             using (var webClient = new System.Net.WebClient())
             {
-                string info = webClient.DownloadString("https://poe.ninja/api/data/itemoverview?type=UniqueArmour&league=" + league);
+                info = webClient.DownloadString("https://poe.ninja/api/data/itemoverview?type=UniqueArmour&league=" + league);
                 return info;
             }
         }
@@ -218,7 +234,7 @@ namespace Deti_PoE_ToolBox
         {
             using (var webClient = new System.Net.WebClient())
             {
-                string info = webClient.DownloadString("https://poe.ninja/api/data/itemoverview?type=UniqueAccessory&league=" + league);
+                info = webClient.DownloadString("https://poe.ninja/api/data/itemoverview?type=UniqueAccessory&league=" + league);
                 return info;
             }
         }
@@ -227,7 +243,7 @@ namespace Deti_PoE_ToolBox
         {
             using (var webClient = new System.Net.WebClient())
             {
-                string info = webClient.DownloadString("https://poe.ninja/api/data/itemoverview?type=Beast&league=" + league);
+                info = webClient.DownloadString("https://poe.ninja/api/data/itemoverview?type=Beast&league=" + league);
                 return info;
             }
         }
@@ -236,7 +252,7 @@ namespace Deti_PoE_ToolBox
         {
             using (var webClient = new System.Net.WebClient())
             {
-                string info = webClient.DownloadString("https://poe.ninja/api/data/itemoverview?type=Beast&league=" + league);
+                info = webClient.DownloadString("https://poe.ninja/api/data/itemoverview?type=Beast&league=" + league);
                 return info;
             }
         }
