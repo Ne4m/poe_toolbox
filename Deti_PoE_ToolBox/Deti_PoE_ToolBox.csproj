@@ -1,0 +1,371 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B7A2D16E-9C46-4FD4-A0D7-36131036C854}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Deti_Poe_ToolBox</RootNamespace>
+    <AssemblyName>Deti Poe ToolBox</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebHelpers.3.2.7\lib\net45\Microsoft.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WebMatrix.Data, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.Data.3.2.7\lib\net45\WebMatrix.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="WebMatrix.WebData, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.WebData.3.2.7\lib\net45\WebMatrix.WebData.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdvancedBaseChecker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdvancedBaseChecker.Designer.cs">
+      <DependentUpon>AdvancedBaseChecker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdvencedConversionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdvencedConversionForm.Designer.cs">
+      <DependentUpon>AdvencedConversionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DetailedMapPrices.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DetailedMapPrices.Designer.cs">
+      <DependentUpon>DetailedMapPrices.cs</DependentUpon>
+    </Compile>
+    <Compile Include="divCardAnalyze.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="divCardAnalyze.Designer.cs">
+      <DependentUpon>divCardAnalyze.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DownloadAPIS.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form3.Designer.cs">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="getSeedInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="getSeedInput.Designer.cs">
+      <DependentUpon>getSeedInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GetUserInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GetUserInput.Designer.cs">
+      <DependentUpon>GetUserInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JStructure.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="seedsJS.cs" />
+    <EmbeddedResource Include="AdvancedBaseChecker.resx">
+      <DependentUpon>AdvancedBaseChecker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdvencedConversionForm.resx">
+      <DependentUpon>AdvencedConversionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DetailedMapPrices.resx">
+      <DependentUpon>DetailedMapPrices.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="divCardAnalyze.resx">
+      <DependentUpon>divCardAnalyze.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form3.resx">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="getSeedInput.resx">
+      <DependentUpon>getSeedInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GetUserInput.resx">
+      <DependentUpon>GetUserInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include=".bin\node.cmd" />
+    <None Include="currency.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Alteration.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fusing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Alchemy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chaos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gemcutter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Exalted.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chromatic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Jewellers.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chance.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chisel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Scouring.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BlessedOrb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Regret.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Regal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Divine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VaalOrb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Wisdom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Portal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Armourers.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BlackSmith.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Glassblower.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Transmutation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Augmentation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mirror.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Perandus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SilverCoin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MasterSextant.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\JourneymanSextant.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ApprenticeSextant.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\XophSplinter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TulSplinter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EshSplinter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UulNetolSplinter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChayulaSplinter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Xoph.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tul.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Esh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UulNetol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chayula.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Annulment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OrbofBinding.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Horizon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HarbingerOrb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EngineersOrb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AncientOrb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AnnulmentShard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ExaltedShard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HarbingerOrbShard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MirrorShard.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

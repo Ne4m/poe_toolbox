@@ -1,0 +1,92 @@
+{
+  "query": {
+    "status": {
+      "option": "online"
+    },
+    "type": "Currency Name"
+  },
+  "sort": {
+    "price": "asc"
+  }
+}
+
+/*
+string[] seeds = {"Primal Cleaveling Seed",
+                                "Primal Dustspitter Seed",
+                                "Primal Feasting Horror Seed",
+                                "Primal Maw Seed",
+                                "Primal Rhoa Seed",
+                                "Vivid Arachnid Seed",
+                                "Vivid Leech Seed",
+                                "Vivid Scorpion Seed",
+                                "Vivid Thornweaver Seed",
+                                "Vivid Weta Seed",
+                                "Wild Ape Seed",
+                                "Wild Hatchling Seed",
+                                "Wild Hellion Seed",
+                                "Wild Thornwolf Seed",
+                                "Wild Ursaling Seed",
+                                "Primal Chimeral Grain",
+                                "Primal Dustcrab Grain",
+                                "Primal Rhex Grain",
+                                "Primal Scrabbler Grain",
+                                "Primal Viper Grain",
+                                "Vivid Nestback Grain",
+                                "Vivid Parasite Grain",
+                                "Vivid Razorleg Grain",
+                                "Vivid Sapsucker Grain",
+                                "Vivid Striketail Grain",
+                                "Wild Bristlebeast Grain",
+                                "Wild Chieftain Grain",
+                                "Wild Homunculus Grain",
+                                "Wild Snap Hound Grain",
+                                "Wild Spikeback Grain",
+                                "Primal Blisterlord Bulb",
+                                "Primal Crushclaw Bulb",
+                                "Primal Cystcaller Bulb",
+                                "Primal Reborn Bulb",
+                                "Primal Rhex Matriarch Bulb",
+                                "Vivid Abberarach Bulb",
+                                "Vivid Devourer Bulb",
+                                "Vivid Vulture Bulb",
+                                "Vivid Watcher Bulb",
+                                "Vivid Whipleg Bulb",
+                                "Wild Brambleback Bulb",
+                                "Wild Bristle Matron Bulb",
+                                "Wild Hellion Alpha Bulb",
+                                "Wild Infestation Queen Bulb",
+                                "Wild Thornmaw Bulb",
+                                "Primal Blisterfruit",
+                                "Vivid Scalefruit",
+                                "Wild Thornfruit"};
+
+
+            listView1.Items.Clear();
+            listView1.Columns.Clear();
+            listView1.Columns.Add("Seed Name");
+            listView1.Columns.Add("Chaos Value");
+
+
+
+            //Console.WriteLine("AVG Value is: " + getSeedValue("Wild Hellion Seed"));
+
+            //getSeedValue(seeds[10], true);
+            for (int i = 0; i < seeds.Length; i++)
+            {
+                //Console.WriteLine("Seed Name : " + seeds[i] + " AVG: " + getSeedValue(seeds[i]));
+
+                ListViewItem test = new ListViewItem(seeds[i]);
+                test.SubItems.Add(getSeedValue(seeds[i], false).ToString());
+                listView1.Items.Add(test);
+            }
+
+            listView1.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
+            listView1.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
+            listView2.Items.Clear();
+            CopySelectedItems(listView1, listView2);
+
+            Console.WriteLine(orbChaosValue);
+            GetCurrencyPrice("Orb of Alchemy");
+            Console.WriteLine("1C " + orbChaosValue);
+            Console.WriteLine("10 C " + orbChaosValue*10);
+*/

@@ -1,0 +1,38 @@
+D:\Yedekler\Ryzen 5 Backups\repos\PoE-JSON-Learning\Deti_PoE_ToolBox\bin\Release\Newtonsoft.Json.dll
+D:\Yedekler\Ryzen 5 Backups\repos\PoE-JSON-Learning\Deti_PoE_ToolBox\bin\Release\Newtonsoft.Json.xml
+D:\Yedekler\Ryzen 5 Backups\repos\PoE-JSON-Learning\Deti_PoE_ToolBox\obj\Release\Deti_PoE_ToolBox.csprojAssemblyReference.cache
+D:\Yedekler\Ryzen 5 Backups\repos\PoE-JSON-Learning\Deti_PoE_ToolBox\obj\Release\Deti_PoE_ToolBox.AdvancedBaseChecker.resources
+D:\Yedekler\Ryzen 5 Backups\repos\PoE-JSON-Learning\Deti_PoE_ToolBox\obj\Release\Deti_PoE_ToolBox.AdvencedConversionForm.resources
+D:\Yedekler\Ryzen 5 Backups\repos\PoE-JSON-Learning\Deti_PoE_ToolBox\obj\Release\Deti_PoE_ToolBox.DetailedMapPrices.resources
+D:\Yedekler\Ryzen 5 Backups\repos\PoE-JSON-Learning\Deti_PoE_ToolBox\obj\Release\Deti_PoE_ToolBox.Form1.resources
+D:\Yedekler\Ryzen 5 Backups\repos\PoE-JSON-Learning\Deti_PoE_ToolBox\obj\Release\Deti_PoE_ToolBox.Form2.resources
+D:\Yedekler\Ryzen 5 Backups\repos\PoE-JSON-Learning\Deti_PoE_ToolBox\obj\Release\Deti_PoE_ToolBox.Form3.resources
+D:\Yedekler\Ryzen 5 Backups\repos\PoE-JSON-Learning\Deti_PoE_ToolBox\obj\Release\Deti_PoE_ToolBox.GetUserInput.resources
+D:\Yedekler\Ryzen 5 Backups\repos\PoE-JSON-Learning\Deti_PoE_ToolBox\obj\Release\Deti_Poe_ToolBox.Properties.Resources.resources
+D:\Yedekler\Ryzen 5 Backups\repos\PoE-JSON-Learning\Deti_PoE_ToolBox\obj\Release\Deti_PoE_ToolBox.csproj.GenerateResource.cache
+D:\Yedekler\Ryzen 5 Backups\repos\PoE-JSON-Learning\Deti_PoE_ToolBox\obj\Release\Deti_PoE_ToolBox.csproj.CoreCompileInputs.cache
+D:\Yedekler\Ryzen 5 Backups\repos\PoE-JSON-Learning\Deti_PoE_ToolBox\obj\Release\Deti_PoE_ToolBox.csproj.CopyComplete
+D:\Yedekler\Ryzen 5 Backups\repos\PoE-JSON-Learning\Deti_PoE_ToolBox\obj\Release\Deti_Poe_ToolBox.divCardAnalyze.resources
+D:\Yedekler\Ryzen 5 Backups\repos\PoE-JSON-Learning\Deti_PoE_ToolBox\bin\Release\currency.json
+D:\Yedekler\Ryzen 5 Backups\repos\PoE-JSON-Learning\Deti_PoE_ToolBox\bin\Release\Microsoft.Web.Helpers.dll
+D:\Yedekler\Ryzen 5 Backups\repos\PoE-JSON-Learning\Deti_PoE_ToolBox\bin\Release\Microsoft.Web.Infrastructure.dll
+D:\Yedekler\Ryzen 5 Backups\repos\PoE-JSON-Learning\Deti_PoE_ToolBox\bin\Release\System.Web.Helpers.dll
+D:\Yedekler\Ryzen 5 Backups\repos\PoE-JSON-Learning\Deti_PoE_ToolBox\bin\Release\System.Web.Razor.dll
+D:\Yedekler\Ryzen 5 Backups\repos\PoE-JSON-Learning\Deti_PoE_ToolBox\bin\Release\System.Web.WebPages.Deployment.dll
+D:\Yedekler\Ryzen 5 Backups\repos\PoE-JSON-Learning\Deti_PoE_ToolBox\bin\Release\System.Web.WebPages.dll
+D:\Yedekler\Ryzen 5 Backups\repos\PoE-JSON-Learning\Deti_PoE_ToolBox\bin\Release\System.Web.WebPages.Razor.dll
+D:\Yedekler\Ryzen 5 Backups\repos\PoE-JSON-Learning\Deti_PoE_ToolBox\bin\Release\WebMatrix.Data.dll
+D:\Yedekler\Ryzen 5 Backups\repos\PoE-JSON-Learning\Deti_PoE_ToolBox\bin\Release\WebMatrix.WebData.dll
+D:\Yedekler\Ryzen 5 Backups\repos\PoE-JSON-Learning\Deti_PoE_ToolBox\bin\Release\System.Web.Helpers.xml
+D:\Yedekler\Ryzen 5 Backups\repos\PoE-JSON-Learning\Deti_PoE_ToolBox\bin\Release\System.Web.Razor.xml
+D:\Yedekler\Ryzen 5 Backups\repos\PoE-JSON-Learning\Deti_PoE_ToolBox\bin\Release\System.Web.WebPages.xml
+D:\Yedekler\Ryzen 5 Backups\repos\PoE-JSON-Learning\Deti_PoE_ToolBox\bin\Release\System.Web.WebPages.Deployment.xml
+D:\Yedekler\Ryzen 5 Backups\repos\PoE-JSON-Learning\Deti_PoE_ToolBox\bin\Release\System.Web.WebPages.Razor.xml
+D:\Yedekler\Ryzen 5 Backups\repos\PoE-JSON-Learning\Deti_PoE_ToolBox\bin\Release\WebMatrix.Data.xml
+D:\Yedekler\Ryzen 5 Backups\repos\PoE-JSON-Learning\Deti_PoE_ToolBox\bin\Release\WebMatrix.WebData.xml
+D:\Yedekler\Ryzen 5 Backups\repos\PoE-JSON-Learning\Deti_PoE_ToolBox\obj\Release\Deti_Poe_ToolBox.getSeedInput.resources
+D:\Yedekler\Ryzen 5 Backups\repos\PoE-JSON-Learning\Deti_PoE_ToolBox\bin\Release\Deti Poe ToolBox.exe.config
+D:\Yedekler\Ryzen 5 Backups\repos\PoE-JSON-Learning\Deti_PoE_ToolBox\bin\Release\Deti Poe ToolBox.exe
+D:\Yedekler\Ryzen 5 Backups\repos\PoE-JSON-Learning\Deti_PoE_ToolBox\bin\Release\Deti Poe ToolBox.pdb
+D:\Yedekler\Ryzen 5 Backups\repos\PoE-JSON-Learning\Deti_PoE_ToolBox\obj\Release\Deti Poe ToolBox.exe
+D:\Yedekler\Ryzen 5 Backups\repos\PoE-JSON-Learning\Deti_PoE_ToolBox\obj\Release\Deti Poe ToolBox.pdb

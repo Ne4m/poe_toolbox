@@ -1,0 +1,12 @@
+D:\Yedekler\Ryzen 5 Backups\repos\PoE-JSON-Learning\PoE-JSON-Learning\obj\Debug\PoE_JSON_Learning.csprojAssemblyReference.cache
+D:\Yedekler\Ryzen 5 Backups\repos\PoE-JSON-Learning\PoE-JSON-Learning\obj\Debug\DetiPoeToolBox.AdvancedBaseChecker.resources
+D:\Yedekler\Ryzen 5 Backups\repos\PoE-JSON-Learning\PoE-JSON-Learning\obj\Debug\DetiPoeToolBox.AdvencedConversionForm.resources
+D:\Yedekler\Ryzen 5 Backups\repos\PoE-JSON-Learning\PoE-JSON-Learning\obj\Debug\DetiPoeToolBox.DetailedMapPrices.resources
+D:\Yedekler\Ryzen 5 Backups\repos\PoE-JSON-Learning\PoE-JSON-Learning\obj\Debug\PoE_JSON_Learning.Form1.resources
+D:\Yedekler\Ryzen 5 Backups\repos\PoE-JSON-Learning\PoE-JSON-Learning\obj\Debug\DetiPoeToolBox.Form2.resources
+D:\Yedekler\Ryzen 5 Backups\repos\PoE-JSON-Learning\PoE-JSON-Learning\obj\Debug\DetiPoeToolBox.GetUserInput.resources
+D:\Yedekler\Ryzen 5 Backups\repos\PoE-JSON-Learning\PoE-JSON-Learning\obj\Debug\PoE_JSON_Learning.Properties.Resources.resources
+D:\Yedekler\Ryzen 5 Backups\repos\PoE-JSON-Learning\PoE-JSON-Learning\obj\Debug\PoE_JSON_Learning.csproj.GenerateResource.cache
+D:\Yedekler\Ryzen 5 Backups\repos\PoE-JSON-Learning\PoE-JSON-Learning\obj\Debug\PoE_JSON_Learning.csproj.CoreCompileInputs.cache
+D:\Yedekler\Ryzen 5 Backups\repos\PoE-JSON-Learning\PoE-JSON-Learning\obj\Debug\Deti Poe ToolBox 0.7.exe
+D:\Yedekler\Ryzen 5 Backups\repos\PoE-JSON-Learning\PoE-JSON-Learning\obj\Debug\Deti Poe ToolBox 0.7.pdb

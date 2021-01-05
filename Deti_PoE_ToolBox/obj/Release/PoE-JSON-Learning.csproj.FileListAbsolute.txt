@@ -1,0 +1,18 @@
+C:\Users\Deti\source\repos\PoE-JSON-Learning\PoE-JSON-Learning\bin\Release\Newtonsoft.Json.dll
+C:\Users\Deti\source\repos\PoE-JSON-Learning\PoE-JSON-Learning\bin\Release\Newtonsoft.Json.xml
+C:\Users\Deti\source\repos\PoE-JSON-Learning\PoE-JSON-Learning\obj\Release\PoE-JSON-Learning.csprojAssemblyReference.cache
+C:\Users\Deti\source\repos\PoE-JSON-Learning\PoE-JSON-Learning\obj\Release\PoE_JSON_Learning.Form1.resources
+C:\Users\Deti\source\repos\PoE-JSON-Learning\PoE-JSON-Learning\obj\Release\PoE_JSON_Learning.Properties.Resources.resources
+C:\Users\Deti\source\repos\PoE-JSON-Learning\PoE-JSON-Learning\obj\Release\PoE-JSON-Learning.csproj.GenerateResource.cache
+C:\Users\Deti\source\repos\PoE-JSON-Learning\PoE-JSON-Learning\obj\Release\PoE-JSON-Learning.csproj.CoreCompileInputs.cache
+C:\Users\Deti\source\repos\PoE-JSON-Learning\PoE-JSON-Learning\obj\Release\PoE-JSON-Learning.csproj.CopyComplete
+C:\Users\Deti\source\repos\PoE-JSON-Learning\PoE-JSON-Learning\obj\Release\PoE_JSON_Learning.Form2.resources
+C:\Users\Deti\source\repos\PoE-JSON-Learning\PoE-JSON-Learning\obj\Release\PoE_JSON_Learning.GetUserInput.resources
+C:\Users\Deti\source\repos\PoE-JSON-Learning\PoE-JSON-Learning\obj\Release\PoE_JSON_Learning.DetailedMapPrices.resources
+C:\Users\Deti\source\repos\PoE-JSON-Learning\PoE-JSON-Learning\obj\Release\PoE_JSON_Learning.AdvencedConversionForm.resources
+C:\Users\Deti\source\repos\PoE-JSON-Learning\PoE-JSON-Learning\obj\Release\PoE_JSON_Learning.AdvancedBaseChecker.resources
+C:\Users\Deti\source\repos\PoE-JSON-Learning\PoE-JSON-Learning\bin\Release\Deti Poe ToolBox 0.6c.exe.config
+C:\Users\Deti\source\repos\PoE-JSON-Learning\PoE-JSON-Learning\bin\Release\Deti Poe ToolBox 0.6c.exe
+C:\Users\Deti\source\repos\PoE-JSON-Learning\PoE-JSON-Learning\bin\Release\Deti Poe ToolBox 0.6c.pdb
+C:\Users\Deti\source\repos\PoE-JSON-Learning\PoE-JSON-Learning\obj\Release\Deti Poe ToolBox 0.6c.exe
+C:\Users\Deti\source\repos\PoE-JSON-Learning\PoE-JSON-Learning\obj\Release\Deti Poe ToolBox 0.6c.pdb
