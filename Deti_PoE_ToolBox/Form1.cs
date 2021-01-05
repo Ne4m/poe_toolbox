@@ -19,6 +19,9 @@ using System.Web.Helpers;
 
 
 /* 
+ * 05.01.2021
+ * Merged into Github No Longer Using This --
+ * 
  * /* Changelog v0.83 - 17.09.2020
  * Added Support for Heist League
  * 
@@ -69,7 +72,6 @@ using System.Web.Helpers;
  * 
  * 
  * To-Do List - Last Updated : 21.12.2018
- * Complete Conversion Form Buy IDs
  * Price Checker For Corrupted/6 Linked/Coloured Bases
  * For 6 Linked try to learn how many "-" in the Sockets: line and "-" number + 1 will give linked number (Sockets: G-B-R-G-R-B )
  * For Coloured Bases How many R-G-B in Sockets Line:
@@ -108,15 +110,6 @@ namespace Deti_PoE_ToolBox
             var stuff2 = JsonConvert.DeserializeObject<List<JStructure.LeagueInfo>>(dlapi.getLeagueInfo());
 
 
-
-            //if (c.active == true & c.challenge == true & c.hardcore == false) // !c.name.Contains("Standard") & !c.name.Contains("Hardcore")
-            //{
-            //    league = c.name;
-
-            //    MessageBox.Show(league);
-            //    Console.WriteLine(c.name);
-
-            //}
             this.league = stuff2[2].name;
 
             for (int i=0; i<stuff2.Count; i++)
@@ -154,13 +147,6 @@ namespace Deti_PoE_ToolBox
 
         private static void CopySelectedItems(ListView source, ListView target)
         {
-            /*while (source.Items.Count > 0)
-            {
-                target.Columns.Add("i");
-                ListViewItem temp = source.Items[0];
-                source.Items.Remove(temp);
-                target.Items.Add(temp);
-            }*/
 
             foreach (ListViewItem item in source.Items)
             {
@@ -496,7 +482,7 @@ namespace Deti_PoE_ToolBox
             listView1.Columns.Add("Name");
             listView1.Columns.Add("Chaos Value");
             listView1.Columns.Add("Exalted Value");
-            listView1.Columns.Add("Description"); //                 test.SubItems.Add(c.explicitModifiers[0].text);
+            listView1.Columns.Add("Description");
 
             foreach (var c in stuff2.lines)
             {

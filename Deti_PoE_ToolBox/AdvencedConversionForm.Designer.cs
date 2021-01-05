@@ -914,6 +914,7 @@
             // BindingButton_2
             // 
             this.BindingButton_2.BackColor = System.Drawing.Color.Transparent;
+            this.BindingButton_2.Image = global::Deti_Poe_ToolBox.Properties.Resources.OrbofBinding;
             this.BindingButton_2.Location = new System.Drawing.Point(816, 64);
             this.BindingButton_2.Name = "BindingButton_2";
             this.BindingButton_2.Size = new System.Drawing.Size(42, 42);
@@ -937,6 +938,7 @@
             // EngineersOrbButton_2
             // 
             this.EngineersOrbButton_2.BackColor = System.Drawing.Color.Transparent;
+            this.EngineersOrbButton_2.Image = global::Deti_Poe_ToolBox.Properties.Resources.EngineersOrb;
             this.EngineersOrbButton_2.Location = new System.Drawing.Point(951, 64);
             this.EngineersOrbButton_2.Name = "EngineersOrbButton_2";
             this.EngineersOrbButton_2.Size = new System.Drawing.Size(42, 42);
@@ -948,6 +950,7 @@
             // HorizonOrbButton_2
             // 
             this.HorizonOrbButton_2.BackColor = System.Drawing.Color.Transparent;
+            this.HorizonOrbButton_2.Image = global::Deti_Poe_ToolBox.Properties.Resources.Horizon;
             this.HorizonOrbButton_2.Location = new System.Drawing.Point(861, 64);
             this.HorizonOrbButton_2.Name = "HorizonOrbButton_2";
             this.HorizonOrbButton_2.Size = new System.Drawing.Size(42, 42);
@@ -959,6 +962,7 @@
             // PerandusCoinButton_2
             // 
             this.PerandusCoinButton_2.BackColor = System.Drawing.Color.Transparent;
+            this.PerandusCoinButton_2.Image = global::Deti_Poe_ToolBox.Properties.Resources.Perandus;
             this.PerandusCoinButton_2.Location = new System.Drawing.Point(96, 64);
             this.PerandusCoinButton_2.Name = "PerandusCoinButton_2";
             this.PerandusCoinButton_2.Size = new System.Drawing.Size(42, 42);
@@ -970,6 +974,7 @@
             // EshSplinterButton_2
             // 
             this.EshSplinterButton_2.BackColor = System.Drawing.Color.Transparent;
+            this.EshSplinterButton_2.Image = global::Deti_Poe_ToolBox.Properties.Resources.EshSplinter;
             this.EshSplinterButton_2.Location = new System.Drawing.Point(411, 64);
             this.EshSplinterButton_2.Name = "EshSplinterButton_2";
             this.EshSplinterButton_2.Size = new System.Drawing.Size(42, 42);
@@ -981,6 +986,7 @@
             // XophSplinterButton_2
             // 
             this.XophSplinterButton_2.BackColor = System.Drawing.Color.Transparent;
+            this.XophSplinterButton_2.Image = global::Deti_Poe_ToolBox.Properties.Resources.XophSplinter;
             this.XophSplinterButton_2.Location = new System.Drawing.Point(321, 64);
             this.XophSplinterButton_2.Name = "XophSplinterButton_2";
             this.XophSplinterButton_2.Size = new System.Drawing.Size(42, 42);
@@ -992,6 +998,7 @@
             // AncientOrbButton_2
             // 
             this.AncientOrbButton_2.BackColor = System.Drawing.Color.Transparent;
+            this.AncientOrbButton_2.Image = global::Deti_Poe_ToolBox.Properties.Resources.AncientOrb;
             this.AncientOrbButton_2.Location = new System.Drawing.Point(6, 109);
             this.AncientOrbButton_2.Name = "AncientOrbButton_2";
             this.AncientOrbButton_2.Size = new System.Drawing.Size(42, 42);
@@ -1003,6 +1010,7 @@
             // AnnulmentShardButton_2
             // 
             this.AnnulmentShardButton_2.BackColor = System.Drawing.Color.Transparent;
+            this.AnnulmentShardButton_2.Image = global::Deti_Poe_ToolBox.Properties.Resources.AnnulmentShard;
             this.AnnulmentShardButton_2.Location = new System.Drawing.Point(51, 109);
             this.AnnulmentShardButton_2.Name = "AnnulmentShardButton_2";
             this.AnnulmentShardButton_2.Size = new System.Drawing.Size(42, 42);
@@ -1014,6 +1022,7 @@
             // ExaltedShard_2
             // 
             this.ExaltedShard_2.BackColor = System.Drawing.Color.Transparent;
+            this.ExaltedShard_2.Image = global::Deti_Poe_ToolBox.Properties.Resources.ExaltedShard;
             this.ExaltedShard_2.Location = new System.Drawing.Point(96, 109);
             this.ExaltedShard_2.Name = "ExaltedShard_2";
             this.ExaltedShard_2.Size = new System.Drawing.Size(42, 42);
@@ -1025,6 +1034,7 @@
             // HarbingerOrbShardButton_2
             // 
             this.HarbingerOrbShardButton_2.BackColor = System.Drawing.Color.Transparent;
+            this.HarbingerOrbShardButton_2.Image = global::Deti_Poe_ToolBox.Properties.Resources.HarbingerOrbShard;
             this.HarbingerOrbShardButton_2.Location = new System.Drawing.Point(141, 109);
             this.HarbingerOrbShardButton_2.Name = "HarbingerOrbShardButton_2";
             this.HarbingerOrbShardButton_2.Size = new System.Drawing.Size(42, 42);
@@ -1036,6 +1046,7 @@
             // MirrorShardButton_2
             // 
             this.MirrorShardButton_2.BackColor = System.Drawing.Color.Transparent;
+            this.MirrorShardButton_2.Image = global::Deti_Poe_ToolBox.Properties.Resources.MirrorShard;
             this.MirrorShardButton_2.Location = new System.Drawing.Point(186, 109);
             this.MirrorShardButton_2.Name = "MirrorShardButton_2";
             this.MirrorShardButton_2.Size = new System.Drawing.Size(42, 42);
@@ -1047,6 +1058,7 @@
             // UulNetolSplinterButton_2
             // 
             this.UulNetolSplinterButton_2.BackColor = System.Drawing.Color.Transparent;
+            this.UulNetolSplinterButton_2.Image = global::Deti_Poe_ToolBox.Properties.Resources.UulNetolSplinter;
             this.UulNetolSplinterButton_2.Location = new System.Drawing.Point(456, 64);
             this.UulNetolSplinterButton_2.Name = "UulNetolSplinterButton_2";
             this.UulNetolSplinterButton_2.Size = new System.Drawing.Size(42, 42);
@@ -1058,6 +1070,7 @@
             // TulSplinterButton_2
             // 
             this.TulSplinterButton_2.BackColor = System.Drawing.Color.Transparent;
+            this.TulSplinterButton_2.Image = global::Deti_Poe_ToolBox.Properties.Resources.TulSplinter;
             this.TulSplinterButton_2.Location = new System.Drawing.Point(366, 64);
             this.TulSplinterButton_2.Name = "TulSplinterButton_2";
             this.TulSplinterButton_2.Size = new System.Drawing.Size(42, 42);
@@ -1069,6 +1082,7 @@
             // ChayulaSplinter_2
             // 
             this.ChayulaSplinter_2.BackColor = System.Drawing.Color.Transparent;
+            this.ChayulaSplinter_2.Image = global::Deti_Poe_ToolBox.Properties.Resources.ChayulaSplinter;
             this.ChayulaSplinter_2.Location = new System.Drawing.Point(501, 64);
             this.ChayulaSplinter_2.Name = "ChayulaSplinter_2";
             this.ChayulaSplinter_2.Size = new System.Drawing.Size(42, 42);
@@ -1080,6 +1094,7 @@
             // HarbingerOrbButton_2
             // 
             this.HarbingerOrbButton_2.BackColor = System.Drawing.Color.Transparent;
+            this.HarbingerOrbButton_2.Image = global::Deti_Poe_ToolBox.Properties.Resources.HarbingerOrb;
             this.HarbingerOrbButton_2.Location = new System.Drawing.Point(906, 64);
             this.HarbingerOrbButton_2.Name = "HarbingerOrbButton_2";
             this.HarbingerOrbButton_2.Size = new System.Drawing.Size(42, 42);
@@ -1103,6 +1118,7 @@
             // UulNetolButton_2
             // 
             this.UulNetolButton_2.BackColor = System.Drawing.Color.Transparent;
+            this.UulNetolButton_2.Image = global::Deti_Poe_ToolBox.Properties.Resources.UulNetol;
             this.UulNetolButton_2.Location = new System.Drawing.Point(681, 64);
             this.UulNetolButton_2.Name = "UulNetolButton_2";
             this.UulNetolButton_2.Size = new System.Drawing.Size(42, 42);
@@ -1114,6 +1130,7 @@
             // XophButton_2
             // 
             this.XophButton_2.BackColor = System.Drawing.Color.Transparent;
+            this.XophButton_2.Image = global::Deti_Poe_ToolBox.Properties.Resources.Xoph;
             this.XophButton_2.Location = new System.Drawing.Point(546, 64);
             this.XophButton_2.Name = "XophButton_2";
             this.XophButton_2.Size = new System.Drawing.Size(42, 42);
@@ -1125,6 +1142,7 @@
             // TulButton_2
             // 
             this.TulButton_2.BackColor = System.Drawing.Color.Transparent;
+            this.TulButton_2.Image = global::Deti_Poe_ToolBox.Properties.Resources.Tul;
             this.TulButton_2.Location = new System.Drawing.Point(591, 64);
             this.TulButton_2.Name = "TulButton_2";
             this.TulButton_2.Size = new System.Drawing.Size(42, 42);
@@ -1136,6 +1154,7 @@
             // TransmutationButton_2
             // 
             this.TransmutationButton_2.BackColor = System.Drawing.Color.Transparent;
+            this.TransmutationButton_2.Image = global::Deti_Poe_ToolBox.Properties.Resources.Transmutation;
             this.TransmutationButton_2.Location = new System.Drawing.Point(951, 19);
             this.TransmutationButton_2.Name = "TransmutationButton_2";
             this.TransmutationButton_2.Size = new System.Drawing.Size(42, 42);
@@ -1147,6 +1166,7 @@
             // SilverCoinButton_2
             // 
             this.SilverCoinButton_2.BackColor = System.Drawing.Color.Transparent;
+            this.SilverCoinButton_2.Image = global::Deti_Poe_ToolBox.Properties.Resources.SilverCoin;
             this.SilverCoinButton_2.Location = new System.Drawing.Point(141, 64);
             this.SilverCoinButton_2.Name = "SilverCoinButton_2";
             this.SilverCoinButton_2.Size = new System.Drawing.Size(42, 42);
@@ -1264,6 +1284,7 @@
             // MirrorButton_2
             // 
             this.MirrorButton_2.BackColor = System.Drawing.Color.Transparent;
+            this.MirrorButton_2.Image = global::Deti_Poe_ToolBox.Properties.Resources.Mirror;
             this.MirrorButton_2.Location = new System.Drawing.Point(51, 64);
             this.MirrorButton_2.Name = "MirrorButton_2";
             this.MirrorButton_2.Size = new System.Drawing.Size(42, 42);
@@ -1275,6 +1296,7 @@
             // MasterSextantButton_2
             // 
             this.MasterSextantButton_2.BackColor = System.Drawing.Color.Transparent;
+            this.MasterSextantButton_2.Image = global::Deti_Poe_ToolBox.Properties.Resources.MasterSextant;
             this.MasterSextantButton_2.Location = new System.Drawing.Point(186, 64);
             this.MasterSextantButton_2.Name = "MasterSextantButton_2";
             this.MasterSextantButton_2.Size = new System.Drawing.Size(42, 42);
@@ -1286,6 +1308,7 @@
             // JourneymanSextantButton_2
             // 
             this.JourneymanSextantButton_2.BackColor = System.Drawing.Color.Transparent;
+            this.JourneymanSextantButton_2.Image = global::Deti_Poe_ToolBox.Properties.Resources.JourneymanSextant;
             this.JourneymanSextantButton_2.Location = new System.Drawing.Point(231, 64);
             this.JourneymanSextantButton_2.Name = "JourneymanSextantButton_2";
             this.JourneymanSextantButton_2.Size = new System.Drawing.Size(42, 42);
@@ -1369,6 +1392,7 @@
             // EshButton_2
             // 
             this.EshButton_2.BackColor = System.Drawing.Color.Transparent;
+            this.EshButton_2.Image = global::Deti_Poe_ToolBox.Properties.Resources.Esh;
             this.EshButton_2.Location = new System.Drawing.Point(636, 64);
             this.EshButton_2.Name = "EshButton_2";
             this.EshButton_2.Size = new System.Drawing.Size(42, 42);
@@ -1416,6 +1440,7 @@
             // ChayulaButton_2
             // 
             this.ChayulaButton_2.BackColor = System.Drawing.Color.Transparent;
+            this.ChayulaButton_2.Image = global::Deti_Poe_ToolBox.Properties.Resources.Chayula;
             this.ChayulaButton_2.Location = new System.Drawing.Point(726, 64);
             this.ChayulaButton_2.Name = "ChayulaButton_2";
             this.ChayulaButton_2.Size = new System.Drawing.Size(42, 42);
@@ -1463,6 +1488,7 @@
             // AugmentationButton_2
             // 
             this.AugmentationButton_2.BackColor = System.Drawing.Color.Transparent;
+            this.AugmentationButton_2.Image = global::Deti_Poe_ToolBox.Properties.Resources.Augmentation;
             this.AugmentationButton_2.Location = new System.Drawing.Point(6, 64);
             this.AugmentationButton_2.Name = "AugmentationButton_2";
             this.AugmentationButton_2.Size = new System.Drawing.Size(42, 42);
@@ -1486,6 +1512,7 @@
             // ApprenticeSextantButton_2
             // 
             this.ApprenticeSextantButton_2.BackColor = System.Drawing.Color.Transparent;
+            this.ApprenticeSextantButton_2.Image = global::Deti_Poe_ToolBox.Properties.Resources.ApprenticeSextant;
             this.ApprenticeSextantButton_2.Location = new System.Drawing.Point(276, 64);
             this.ApprenticeSextantButton_2.Name = "ApprenticeSextantButton_2";
             this.ApprenticeSextantButton_2.Size = new System.Drawing.Size(42, 42);
@@ -1497,6 +1524,7 @@
             // AnnulmentButton_2
             // 
             this.AnnulmentButton_2.BackColor = System.Drawing.Color.Transparent;
+            this.AnnulmentButton_2.Image = global::Deti_Poe_ToolBox.Properties.Resources.Annulment;
             this.AnnulmentButton_2.Location = new System.Drawing.Point(771, 64);
             this.AnnulmentButton_2.Name = "AnnulmentButton_2";
             this.AnnulmentButton_2.Size = new System.Drawing.Size(42, 42);
