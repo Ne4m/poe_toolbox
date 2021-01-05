@@ -27,24 +27,33 @@ namespace Deti_PoE_ToolBox
 {
     class JStructure
     {
+        //public class LeagueInfo
+        //{
+        //    public int id { get; set; }
+        //    public string name { get; set; }
+        //    public string display { get; set; }
+        //    public bool hardcore { get; set; }
+        //    public bool upcoming { get; set; }
+        //    public bool active { get; set; }
+        //    public bool @event { get; set; }
+        //    public bool challenge { get; set; }
+        //    public DateTime start { get; set; }
+        //    public DateTime? end { get; set; }
+        //}
+
+
         public class LeagueInfo
         {
-            public int id { get; set; }
             public string name { get; set; }
-            public string display { get; set; }
-            public bool hardcore { get; set; }
-            public bool upcoming { get; set; }
-            public bool active { get; set; }
-            public bool @event { get; set; }
-            public bool challenge { get; set; }
-            public DateTime start { get; set; }
-            public DateTime? end { get; set; }
+            public DateTime start_date { get; set; }
+            public DateTime end_date { get; set; }
         }
+
 
         public class Currencies
         {
             public List<CurrencyLines> lines { get; set; }
-           // public CurrencyLines.PayLines pay { get; set; }
+            // public CurrencyLines.PayLines pay { get; set; }
 
             public class CurrencyLines
             {
@@ -101,7 +110,7 @@ namespace Deti_PoE_ToolBox
                 public double chaosEquivalent;
             }
 
-            
+
         }
 
 
@@ -131,7 +140,7 @@ namespace Deti_PoE_ToolBox
         {
             public List<ScarabLines> lines { get; set; }
 
-            
+
 
             public class ScarabLines
             {
@@ -333,7 +342,7 @@ namespace Deti_PoE_ToolBox
                 public int itemClass;
             }
         }
-        
+
         public class Accessories
         {
             public List<AccessoryLines> lines { get; set; }
@@ -358,7 +367,7 @@ namespace Deti_PoE_ToolBox
                 public double chaosValue;
                 public double exaltedValue;
                 public string variant;
-  
+
             }
         }
 

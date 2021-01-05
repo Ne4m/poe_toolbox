@@ -87,3 +87,41 @@ C:\Users\Deti\source\repos\Deti Poe Toolbox\Deti_PoE_ToolBox\obj\Debug\Deti_PoE_
 C:\Users\Deti\source\repos\Deti Poe Toolbox\Deti_PoE_ToolBox\obj\Debug\Deti_PoE_ToolBox.csproj.CopyComplete
 C:\Users\Deti\source\repos\Deti Poe Toolbox\Deti_PoE_ToolBox\obj\Debug\Deti Poe ToolBox.exe
 C:\Users\Deti\source\repos\Deti Poe Toolbox\Deti_PoE_ToolBox\obj\Debug\Deti Poe ToolBox.pdb
+C:\Users\Deti\source\repos\Deti Poe Toolbox\poe_toolbox\Deti_PoE_ToolBox\bin\Debug\currency.json
+C:\Users\Deti\source\repos\Deti Poe Toolbox\poe_toolbox\Deti_PoE_ToolBox\bin\Debug\Deti Poe ToolBox.exe.config
+C:\Users\Deti\source\repos\Deti Poe Toolbox\poe_toolbox\Deti_PoE_ToolBox\bin\Debug\Deti Poe ToolBox.exe
+C:\Users\Deti\source\repos\Deti Poe Toolbox\poe_toolbox\Deti_PoE_ToolBox\bin\Debug\Deti Poe ToolBox.pdb
+C:\Users\Deti\source\repos\Deti Poe Toolbox\poe_toolbox\Deti_PoE_ToolBox\bin\Debug\Microsoft.Web.Helpers.dll
+C:\Users\Deti\source\repos\Deti Poe Toolbox\poe_toolbox\Deti_PoE_ToolBox\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\Deti\source\repos\Deti Poe Toolbox\poe_toolbox\Deti_PoE_ToolBox\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Deti\source\repos\Deti Poe Toolbox\poe_toolbox\Deti_PoE_ToolBox\bin\Debug\System.Web.Helpers.dll
+C:\Users\Deti\source\repos\Deti Poe Toolbox\poe_toolbox\Deti_PoE_ToolBox\bin\Debug\System.Web.Razor.dll
+C:\Users\Deti\source\repos\Deti Poe Toolbox\poe_toolbox\Deti_PoE_ToolBox\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\Deti\source\repos\Deti Poe Toolbox\poe_toolbox\Deti_PoE_ToolBox\bin\Debug\System.Web.WebPages.dll
+C:\Users\Deti\source\repos\Deti Poe Toolbox\poe_toolbox\Deti_PoE_ToolBox\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\Deti\source\repos\Deti Poe Toolbox\poe_toolbox\Deti_PoE_ToolBox\bin\Debug\WebMatrix.Data.dll
+C:\Users\Deti\source\repos\Deti Poe Toolbox\poe_toolbox\Deti_PoE_ToolBox\bin\Debug\WebMatrix.WebData.dll
+C:\Users\Deti\source\repos\Deti Poe Toolbox\poe_toolbox\Deti_PoE_ToolBox\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Deti\source\repos\Deti Poe Toolbox\poe_toolbox\Deti_PoE_ToolBox\bin\Debug\System.Web.Helpers.xml
+C:\Users\Deti\source\repos\Deti Poe Toolbox\poe_toolbox\Deti_PoE_ToolBox\bin\Debug\System.Web.Razor.xml
+C:\Users\Deti\source\repos\Deti Poe Toolbox\poe_toolbox\Deti_PoE_ToolBox\bin\Debug\System.Web.WebPages.xml
+C:\Users\Deti\source\repos\Deti Poe Toolbox\poe_toolbox\Deti_PoE_ToolBox\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\Deti\source\repos\Deti Poe Toolbox\poe_toolbox\Deti_PoE_ToolBox\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\Deti\source\repos\Deti Poe Toolbox\poe_toolbox\Deti_PoE_ToolBox\bin\Debug\WebMatrix.Data.xml
+C:\Users\Deti\source\repos\Deti Poe Toolbox\poe_toolbox\Deti_PoE_ToolBox\bin\Debug\WebMatrix.WebData.xml
+C:\Users\Deti\source\repos\Deti Poe Toolbox\poe_toolbox\Deti_PoE_ToolBox\obj\Debug\Deti_PoE_ToolBox.csprojAssemblyReference.cache
+C:\Users\Deti\source\repos\Deti Poe Toolbox\poe_toolbox\Deti_PoE_ToolBox\obj\Debug\Deti_PoE_ToolBox.AdvancedBaseChecker.resources
+C:\Users\Deti\source\repos\Deti Poe Toolbox\poe_toolbox\Deti_PoE_ToolBox\obj\Debug\Deti_PoE_ToolBox.AdvencedConversionForm.resources
+C:\Users\Deti\source\repos\Deti Poe Toolbox\poe_toolbox\Deti_PoE_ToolBox\obj\Debug\Deti_PoE_ToolBox.DetailedMapPrices.resources
+C:\Users\Deti\source\repos\Deti Poe Toolbox\poe_toolbox\Deti_PoE_ToolBox\obj\Debug\Deti_Poe_ToolBox.divCardAnalyze.resources
+C:\Users\Deti\source\repos\Deti Poe Toolbox\poe_toolbox\Deti_PoE_ToolBox\obj\Debug\Deti_PoE_ToolBox.Form1.resources
+C:\Users\Deti\source\repos\Deti Poe Toolbox\poe_toolbox\Deti_PoE_ToolBox\obj\Debug\Deti_PoE_ToolBox.Form2.resources
+C:\Users\Deti\source\repos\Deti Poe Toolbox\poe_toolbox\Deti_PoE_ToolBox\obj\Debug\Deti_PoE_ToolBox.Form3.resources
+C:\Users\Deti\source\repos\Deti Poe Toolbox\poe_toolbox\Deti_PoE_ToolBox\obj\Debug\Deti_Poe_ToolBox.getSeedInput.resources
+C:\Users\Deti\source\repos\Deti Poe Toolbox\poe_toolbox\Deti_PoE_ToolBox\obj\Debug\Deti_PoE_ToolBox.GetUserInput.resources
+C:\Users\Deti\source\repos\Deti Poe Toolbox\poe_toolbox\Deti_PoE_ToolBox\obj\Debug\Deti_Poe_ToolBox.Properties.Resources.resources
+C:\Users\Deti\source\repos\Deti Poe Toolbox\poe_toolbox\Deti_PoE_ToolBox\obj\Debug\Deti_PoE_ToolBox.csproj.GenerateResource.cache
+C:\Users\Deti\source\repos\Deti Poe Toolbox\poe_toolbox\Deti_PoE_ToolBox\obj\Debug\Deti_PoE_ToolBox.csproj.CoreCompileInputs.cache
+C:\Users\Deti\source\repos\Deti Poe Toolbox\poe_toolbox\Deti_PoE_ToolBox\obj\Debug\Deti_PoE_ToolBox.csproj.CopyComplete
+C:\Users\Deti\source\repos\Deti Poe Toolbox\poe_toolbox\Deti_PoE_ToolBox\obj\Debug\Deti Poe ToolBox.exe
+C:\Users\Deti\source\repos\Deti Poe Toolbox\poe_toolbox\Deti_PoE_ToolBox\obj\Debug\Deti Poe ToolBox.pdb

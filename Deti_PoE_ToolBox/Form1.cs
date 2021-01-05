@@ -98,8 +98,8 @@ namespace Deti_PoE_ToolBox
         public double orbChaosValue;
         public string newinput;
         public string lastclicked;
-        public string league = "Heist";
-        private string version = "0.83";
+        public string league;// = "Heist";
+        private string version = "0.84";
         public static string jsonpath = "currency.json";
         public dynamic myJsonData;
 
@@ -108,20 +108,23 @@ namespace Deti_PoE_ToolBox
             var stuff2 = JsonConvert.DeserializeObject<List<JStructure.LeagueInfo>>(dlapi.getLeagueInfo());
 
 
-            foreach (var c in stuff2)
+
+            //if (c.active == true & c.challenge == true & c.hardcore == false) // !c.name.Contains("Standard") & !c.name.Contains("Hardcore")
+            //{
+            //    league = c.name;
+
+            //    MessageBox.Show(league);
+            //    Console.WriteLine(c.name);
+
+            //}
+            this.league = stuff2[2].name;
+
+            for (int i=0; i<stuff2.Count; i++)
             {
-                if (c.active == true & c.challenge == true & c.hardcore == false) // !c.name.Contains("Standard") & !c.name.Contains("Hardcore")
-                {
-                    league = c.name;
-
-                    MessageBox.Show(league);
-                    Console.WriteLine(c.name);
-
-                }
-
-
-
+                Console.WriteLine(stuff2[i].name);
+                leagueBox.Items.Add(stuff2[i].name);
             }
+            
         }
 
         public void GetCurrencyPrice(string orbName)
@@ -189,18 +192,15 @@ namespace Deti_PoE_ToolBox
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //getLeagueInfo();
-            leagueBox.Items.Add(league);
-            leagueBox.Items.Add("Hardcore " + league);
-            leagueBox.Items.Add("Standard");
-            leagueBox.Items.Add("Hardcore");
+            getLeagueInfo();
+            //leagueBox.Items.Add(league);
+            //leagueBox.Items.Add("Hardcore " + league);
+            //leagueBox.Items.Add("Standard");
+            //leagueBox.Items.Add("Hardcore");
 
             updateTitle(league);
             leagueBox.Text = league;
             getChaosExaltedRate();
-
-  
-            
 
         }
 
