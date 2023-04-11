@@ -39,6 +39,7 @@ namespace Deti_PoE_ToolBox
             this.fossilsArray = new System.Windows.Forms.Button();
             this.mapsArray = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.seedsArray = new System.Windows.Forms.Button();
             this.divcardAnalyzer_bttn = new System.Windows.Forms.Button();
             this.deliriumOrbArray = new System.Windows.Forms.Button();
             this.oilsTypesArray = new System.Windows.Forms.Button();
@@ -79,7 +80,6 @@ namespace Deti_PoE_ToolBox
             this.currencyList2 = new System.Windows.Forms.ComboBox();
             this.list1QuantityBox = new System.Windows.Forms.TextBox();
             this.currencyResultBox = new System.Windows.Forms.TextBox();
-            this.seedsArray = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -87,10 +87,11 @@ namespace Deti_PoE_ToolBox
             // richTextBox1
             // 
             this.richTextBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.richTextBox1.Location = new System.Drawing.Point(15, 47);
+            this.richTextBox1.Location = new System.Drawing.Point(20, 58);
+            this.richTextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
-            this.richTextBox1.Size = new System.Drawing.Size(668, 197);
+            this.richTextBox1.Size = new System.Drawing.Size(889, 242);
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = "";
             this.richTextBox1.Visible = false;
@@ -98,9 +99,10 @@ namespace Deti_PoE_ToolBox
             // getCurrency
             // 
             this.getCurrency.Enabled = false;
-            this.getCurrency.Location = new System.Drawing.Point(1042, 312);
+            this.getCurrency.Location = new System.Drawing.Point(1389, 384);
+            this.getCurrency.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.getCurrency.Name = "getCurrency";
-            this.getCurrency.Size = new System.Drawing.Size(75, 23);
+            this.getCurrency.Size = new System.Drawing.Size(100, 28);
             this.getCurrency.TabIndex = 1;
             this.getCurrency.Text = "Currency";
             this.getCurrency.UseVisualStyleBackColor = true;
@@ -110,9 +112,10 @@ namespace Deti_PoE_ToolBox
             // getAccessory
             // 
             this.getAccessory.Enabled = false;
-            this.getAccessory.Location = new System.Drawing.Point(1025, 357);
+            this.getAccessory.Location = new System.Drawing.Point(1367, 439);
+            this.getAccessory.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.getAccessory.Name = "getAccessory";
-            this.getAccessory.Size = new System.Drawing.Size(75, 23);
+            this.getAccessory.Size = new System.Drawing.Size(100, 28);
             this.getAccessory.TabIndex = 2;
             this.getAccessory.Text = "Accessory";
             this.getAccessory.UseVisualStyleBackColor = true;
@@ -121,9 +124,10 @@ namespace Deti_PoE_ToolBox
             // 
             // getSize
             // 
-            this.getSize.Location = new System.Drawing.Point(1012, 181);
+            this.getSize.Location = new System.Drawing.Point(1349, 223);
+            this.getSize.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.getSize.Name = "getSize";
-            this.getSize.Size = new System.Drawing.Size(75, 23);
+            this.getSize.Size = new System.Drawing.Size(100, 28);
             this.getSize.TabIndex = 3;
             this.getSize.Text = "Size";
             this.getSize.UseVisualStyleBackColor = true;
@@ -134,11 +138,12 @@ namespace Deti_PoE_ToolBox
             // 
             this.accessoryArray.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.accessoryArray.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(44)))), ((int)(((byte)(23)))));
-            this.accessoryArray.Font = new System.Drawing.Font("Fontin", 9F, System.Drawing.FontStyle.Bold);
+            this.accessoryArray.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.accessoryArray.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(170)))), ((int)(((byte)(104)))));
-            this.accessoryArray.Location = new System.Drawing.Point(806, 245);
+            this.accessoryArray.Location = new System.Drawing.Point(1075, 302);
+            this.accessoryArray.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.accessoryArray.Name = "accessoryArray";
-            this.accessoryArray.Size = new System.Drawing.Size(108, 23);
+            this.accessoryArray.Size = new System.Drawing.Size(144, 28);
             this.accessoryArray.TabIndex = 6;
             this.accessoryArray.TabStop = false;
             this.accessoryArray.Text = "Accessory";
@@ -149,11 +154,12 @@ namespace Deti_PoE_ToolBox
             // 
             this.currencyArray.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.currencyArray.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(44)))), ((int)(((byte)(23)))));
-            this.currencyArray.Font = new System.Drawing.Font("Fontin", 9F, System.Drawing.FontStyle.Bold);
+            this.currencyArray.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.currencyArray.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(170)))), ((int)(((byte)(104)))));
-            this.currencyArray.Location = new System.Drawing.Point(688, 45);
+            this.currencyArray.Location = new System.Drawing.Point(917, 55);
+            this.currencyArray.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.currencyArray.Name = "currencyArray";
-            this.currencyArray.Size = new System.Drawing.Size(108, 23);
+            this.currencyArray.Size = new System.Drawing.Size(144, 28);
             this.currencyArray.TabIndex = 7;
             this.currencyArray.Text = "Currency";
             this.currencyArray.UseVisualStyleBackColor = false;
@@ -163,11 +169,12 @@ namespace Deti_PoE_ToolBox
             // 
             this.fossilsArray.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.fossilsArray.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(44)))), ((int)(((byte)(23)))));
-            this.fossilsArray.Font = new System.Drawing.Font("Fontin", 9F, System.Drawing.FontStyle.Bold);
+            this.fossilsArray.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.fossilsArray.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(170)))), ((int)(((byte)(104)))));
-            this.fossilsArray.Location = new System.Drawing.Point(689, 195);
+            this.fossilsArray.Location = new System.Drawing.Point(919, 240);
+            this.fossilsArray.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.fossilsArray.Name = "fossilsArray";
-            this.fossilsArray.Size = new System.Drawing.Size(108, 23);
+            this.fossilsArray.Size = new System.Drawing.Size(144, 28);
             this.fossilsArray.TabIndex = 9;
             this.fossilsArray.Text = "Fossils";
             this.fossilsArray.UseVisualStyleBackColor = false;
@@ -177,11 +184,12 @@ namespace Deti_PoE_ToolBox
             // 
             this.mapsArray.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.mapsArray.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(44)))), ((int)(((byte)(23)))));
-            this.mapsArray.Font = new System.Drawing.Font("Fontin", 9F, System.Drawing.FontStyle.Bold);
+            this.mapsArray.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.mapsArray.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(170)))), ((int)(((byte)(104)))));
-            this.mapsArray.Location = new System.Drawing.Point(806, 145);
+            this.mapsArray.Location = new System.Drawing.Point(1075, 178);
+            this.mapsArray.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.mapsArray.Name = "mapsArray";
-            this.mapsArray.Size = new System.Drawing.Size(108, 23);
+            this.mapsArray.Size = new System.Drawing.Size(144, 28);
             this.mapsArray.TabIndex = 10;
             this.mapsArray.Text = "Maps";
             this.mapsArray.UseVisualStyleBackColor = false;
@@ -224,22 +232,40 @@ namespace Deti_PoE_ToolBox
             this.groupBox1.Controls.Add(this.currencyArray);
             this.groupBox1.Controls.Add(this.fossilsArray);
             this.groupBox1.Controls.Add(this.mapsArray);
-            this.groupBox1.Location = new System.Drawing.Point(0, -5);
+            this.groupBox1.Location = new System.Drawing.Point(0, -6);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(937, 644);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(1249, 793);
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             this.groupBox1.DragEnter += new System.Windows.Forms.DragEventHandler(this.groupBox1_DragEnter);
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // seedsArray
+            // 
+            this.seedsArray.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.seedsArray.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(44)))), ((int)(((byte)(23)))));
+            this.seedsArray.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            this.seedsArray.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(170)))), ((int)(((byte)(104)))));
+            this.seedsArray.Location = new System.Drawing.Point(1075, 55);
+            this.seedsArray.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.seedsArray.Name = "seedsArray";
+            this.seedsArray.Size = new System.Drawing.Size(144, 28);
+            this.seedsArray.TabIndex = 48;
+            this.seedsArray.Text = "Seeds";
+            this.seedsArray.UseVisualStyleBackColor = false;
+            this.seedsArray.Click += new System.EventHandler(this.seedsArray_Click);
+            // 
             // divcardAnalyzer_bttn
             // 
             this.divcardAnalyzer_bttn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(44)))), ((int)(((byte)(23)))));
-            this.divcardAnalyzer_bttn.Font = new System.Drawing.Font("Fontin", 9F, System.Drawing.FontStyle.Bold);
+            this.divcardAnalyzer_bttn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.divcardAnalyzer_bttn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(170)))), ((int)(((byte)(104)))));
-            this.divcardAnalyzer_bttn.Location = new System.Drawing.Point(689, 476);
+            this.divcardAnalyzer_bttn.Location = new System.Drawing.Point(919, 586);
+            this.divcardAnalyzer_bttn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.divcardAnalyzer_bttn.Name = "divcardAnalyzer_bttn";
-            this.divcardAnalyzer_bttn.Size = new System.Drawing.Size(227, 70);
+            this.divcardAnalyzer_bttn.Size = new System.Drawing.Size(303, 86);
             this.divcardAnalyzer_bttn.TabIndex = 47;
             this.divcardAnalyzer_bttn.Text = "Div Card Analyzer";
             this.divcardAnalyzer_bttn.UseVisualStyleBackColor = false;
@@ -249,11 +275,12 @@ namespace Deti_PoE_ToolBox
             // 
             this.deliriumOrbArray.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.deliriumOrbArray.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(44)))), ((int)(((byte)(23)))));
-            this.deliriumOrbArray.Font = new System.Drawing.Font("Fontin", 9F, System.Drawing.FontStyle.Bold);
+            this.deliriumOrbArray.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.deliriumOrbArray.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(170)))), ((int)(((byte)(104)))));
-            this.deliriumOrbArray.Location = new System.Drawing.Point(688, 70);
+            this.deliriumOrbArray.Location = new System.Drawing.Point(917, 86);
+            this.deliriumOrbArray.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.deliriumOrbArray.Name = "deliriumOrbArray";
-            this.deliriumOrbArray.Size = new System.Drawing.Size(108, 23);
+            this.deliriumOrbArray.Size = new System.Drawing.Size(144, 28);
             this.deliriumOrbArray.TabIndex = 46;
             this.deliriumOrbArray.Text = "Delirium Orbs";
             this.deliriumOrbArray.UseVisualStyleBackColor = false;
@@ -263,11 +290,12 @@ namespace Deti_PoE_ToolBox
             // 
             this.oilsTypesArray.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.oilsTypesArray.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(44)))), ((int)(((byte)(23)))));
-            this.oilsTypesArray.Font = new System.Drawing.Font("Fontin", 9F, System.Drawing.FontStyle.Bold);
+            this.oilsTypesArray.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.oilsTypesArray.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(170)))), ((int)(((byte)(104)))));
-            this.oilsTypesArray.Location = new System.Drawing.Point(689, 120);
+            this.oilsTypesArray.Location = new System.Drawing.Point(919, 148);
+            this.oilsTypesArray.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.oilsTypesArray.Name = "oilsTypesArray";
-            this.oilsTypesArray.Size = new System.Drawing.Size(108, 23);
+            this.oilsTypesArray.Size = new System.Drawing.Size(144, 28);
             this.oilsTypesArray.TabIndex = 45;
             this.oilsTypesArray.Text = "Oils";
             this.oilsTypesArray.UseVisualStyleBackColor = false;
@@ -277,11 +305,12 @@ namespace Deti_PoE_ToolBox
             // 
             this.incubatorsArray.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.incubatorsArray.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(44)))), ((int)(((byte)(23)))));
-            this.incubatorsArray.Font = new System.Drawing.Font("Fontin", 9F, System.Drawing.FontStyle.Bold);
+            this.incubatorsArray.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.incubatorsArray.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(170)))), ((int)(((byte)(104)))));
-            this.incubatorsArray.Location = new System.Drawing.Point(689, 145);
+            this.incubatorsArray.Location = new System.Drawing.Point(919, 178);
+            this.incubatorsArray.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.incubatorsArray.Name = "incubatorsArray";
-            this.incubatorsArray.Size = new System.Drawing.Size(108, 23);
+            this.incubatorsArray.Size = new System.Drawing.Size(144, 28);
             this.incubatorsArray.TabIndex = 44;
             this.incubatorsArray.Text = "Incubators";
             this.incubatorsArray.UseVisualStyleBackColor = false;
@@ -290,9 +319,10 @@ namespace Deti_PoE_ToolBox
             // leagueBox
             // 
             this.leagueBox.FormattingEnabled = true;
-            this.leagueBox.Location = new System.Drawing.Point(681, 17);
+            this.leagueBox.Location = new System.Drawing.Point(908, 21);
+            this.leagueBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.leagueBox.Name = "leagueBox";
-            this.leagueBox.Size = new System.Drawing.Size(121, 21);
+            this.leagueBox.Size = new System.Drawing.Size(160, 24);
             this.leagueBox.TabIndex = 43;
             this.leagueBox.SelectedIndexChanged += new System.EventHandler(this.leagueBox_SelectedIndexChanged);
             // 
@@ -300,9 +330,10 @@ namespace Deti_PoE_ToolBox
             // 
             this.chooseLeagueLabel.AutoSize = true;
             this.chooseLeagueLabel.ForeColor = System.Drawing.Color.Black;
-            this.chooseLeagueLabel.Location = new System.Drawing.Point(597, 20);
+            this.chooseLeagueLabel.Location = new System.Drawing.Point(796, 25);
+            this.chooseLeagueLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.chooseLeagueLabel.Name = "chooseLeagueLabel";
-            this.chooseLeagueLabel.Size = new System.Drawing.Size(82, 13);
+            this.chooseLeagueLabel.Size = new System.Drawing.Size(103, 16);
             this.chooseLeagueLabel.TabIndex = 42;
             this.chooseLeagueLabel.Text = "Choose League";
             // 
@@ -310,11 +341,12 @@ namespace Deti_PoE_ToolBox
             // 
             this.uniqueBeastsArray.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.uniqueBeastsArray.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(44)))), ((int)(((byte)(23)))));
-            this.uniqueBeastsArray.Font = new System.Drawing.Font("Fontin", 9F, System.Drawing.FontStyle.Bold);
+            this.uniqueBeastsArray.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.uniqueBeastsArray.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(170)))), ((int)(((byte)(104)))));
-            this.uniqueBeastsArray.Location = new System.Drawing.Point(806, 295);
+            this.uniqueBeastsArray.Location = new System.Drawing.Point(1075, 363);
+            this.uniqueBeastsArray.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.uniqueBeastsArray.Name = "uniqueBeastsArray";
-            this.uniqueBeastsArray.Size = new System.Drawing.Size(108, 23);
+            this.uniqueBeastsArray.Size = new System.Drawing.Size(144, 28);
             this.uniqueBeastsArray.TabIndex = 41;
             this.uniqueBeastsArray.Text = "Unique Beasts";
             this.uniqueBeastsArray.UseVisualStyleBackColor = false;
@@ -325,11 +357,12 @@ namespace Deti_PoE_ToolBox
             // 
             this.beastsArray.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.beastsArray.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(44)))), ((int)(((byte)(23)))));
-            this.beastsArray.Font = new System.Drawing.Font("Fontin", 9F, System.Drawing.FontStyle.Bold);
+            this.beastsArray.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.beastsArray.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(170)))), ((int)(((byte)(104)))));
-            this.beastsArray.Location = new System.Drawing.Point(806, 270);
+            this.beastsArray.Location = new System.Drawing.Point(1075, 332);
+            this.beastsArray.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.beastsArray.Name = "beastsArray";
-            this.beastsArray.Size = new System.Drawing.Size(108, 23);
+            this.beastsArray.Size = new System.Drawing.Size(144, 28);
             this.beastsArray.TabIndex = 40;
             this.beastsArray.Text = "Beasts";
             this.beastsArray.UseVisualStyleBackColor = false;
@@ -339,9 +372,10 @@ namespace Deti_PoE_ToolBox
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(682, 626);
+            this.label2.Location = new System.Drawing.Point(909, 770);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(120, 13);
+            this.label2.Size = new System.Drawing.Size(147, 16);
             this.label2.TabIndex = 39;
             this.label2.Text = "Deti Poe ToolBox v0.81";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -349,11 +383,12 @@ namespace Deti_PoE_ToolBox
             // itemLevelPriceCheckButton
             // 
             this.itemLevelPriceCheckButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(44)))), ((int)(((byte)(23)))));
-            this.itemLevelPriceCheckButton.Font = new System.Drawing.Font("Fontin", 9F, System.Drawing.FontStyle.Bold);
+            this.itemLevelPriceCheckButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.itemLevelPriceCheckButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(170)))), ((int)(((byte)(104)))));
-            this.itemLevelPriceCheckButton.Location = new System.Drawing.Point(689, 400);
+            this.itemLevelPriceCheckButton.Location = new System.Drawing.Point(919, 492);
+            this.itemLevelPriceCheckButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.itemLevelPriceCheckButton.Name = "itemLevelPriceCheckButton";
-            this.itemLevelPriceCheckButton.Size = new System.Drawing.Size(227, 70);
+            this.itemLevelPriceCheckButton.Size = new System.Drawing.Size(303, 86);
             this.itemLevelPriceCheckButton.TabIndex = 38;
             this.itemLevelPriceCheckButton.Text = "Item Level Price Checker";
             this.itemLevelPriceCheckButton.UseVisualStyleBackColor = false;
@@ -362,11 +397,12 @@ namespace Deti_PoE_ToolBox
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(44)))), ((int)(((byte)(23)))));
-            this.button1.Font = new System.Drawing.Font("Fontin", 9F, System.Drawing.FontStyle.Bold);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(170)))), ((int)(((byte)(104)))));
-            this.button1.Location = new System.Drawing.Point(689, 324);
+            this.button1.Location = new System.Drawing.Point(919, 399);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(225, 70);
+            this.button1.Size = new System.Drawing.Size(300, 86);
             this.button1.TabIndex = 32;
             this.button1.Text = "Advanced Currency Conversion";
             this.button1.UseVisualStyleBackColor = false;
@@ -376,9 +412,10 @@ namespace Deti_PoE_ToolBox
             // 
             this.searchLbl.AutoSize = true;
             this.searchLbl.ForeColor = System.Drawing.Color.Black;
-            this.searchLbl.Location = new System.Drawing.Point(12, 22);
+            this.searchLbl.Location = new System.Drawing.Point(16, 27);
+            this.searchLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.searchLbl.Name = "searchLbl";
-            this.searchLbl.Size = new System.Drawing.Size(41, 13);
+            this.searchLbl.Size = new System.Drawing.Size(50, 16);
             this.searchLbl.TabIndex = 37;
             this.searchLbl.Text = "Search";
             // 
@@ -392,9 +429,10 @@ namespace Deti_PoE_ToolBox
             this.columnHeader3});
             this.listView1.GridLines = true;
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(15, 45);
+            this.listView1.Location = new System.Drawing.Point(20, 55);
+            this.listView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(668, 501);
+            this.listView1.Size = new System.Drawing.Size(889, 616);
             this.listView1.TabIndex = 1;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -417,9 +455,10 @@ namespace Deti_PoE_ToolBox
             // 
             // txt_Search
             // 
-            this.txt_Search.Location = new System.Drawing.Point(59, 19);
+            this.txt_Search.Location = new System.Drawing.Point(79, 23);
+            this.txt_Search.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_Search.Name = "txt_Search";
-            this.txt_Search.Size = new System.Drawing.Size(324, 20);
+            this.txt_Search.Size = new System.Drawing.Size(431, 22);
             this.txt_Search.TabIndex = 33;
             this.txt_Search.TextChanged += new System.EventHandler(this.txt_Search_TextChanged);
             // 
@@ -427,11 +466,12 @@ namespace Deti_PoE_ToolBox
             // 
             this.weaponsArray.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.weaponsArray.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(44)))), ((int)(((byte)(23)))));
-            this.weaponsArray.Font = new System.Drawing.Font("Fontin", 9F, System.Drawing.FontStyle.Bold);
+            this.weaponsArray.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.weaponsArray.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(170)))), ((int)(((byte)(104)))));
-            this.weaponsArray.Location = new System.Drawing.Point(806, 220);
+            this.weaponsArray.Location = new System.Drawing.Point(1075, 271);
+            this.weaponsArray.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.weaponsArray.Name = "weaponsArray";
-            this.weaponsArray.Size = new System.Drawing.Size(108, 23);
+            this.weaponsArray.Size = new System.Drawing.Size(144, 28);
             this.weaponsArray.TabIndex = 24;
             this.weaponsArray.Text = "Unique Weapons";
             this.weaponsArray.UseVisualStyleBackColor = false;
@@ -441,11 +481,12 @@ namespace Deti_PoE_ToolBox
             // 
             this.armoursArray.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.armoursArray.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(44)))), ((int)(((byte)(23)))));
-            this.armoursArray.Font = new System.Drawing.Font("Fontin", 9F, System.Drawing.FontStyle.Bold);
+            this.armoursArray.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.armoursArray.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(170)))), ((int)(((byte)(104)))));
-            this.armoursArray.Location = new System.Drawing.Point(806, 95);
+            this.armoursArray.Location = new System.Drawing.Point(1075, 117);
+            this.armoursArray.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.armoursArray.Name = "armoursArray";
-            this.armoursArray.Size = new System.Drawing.Size(108, 23);
+            this.armoursArray.Size = new System.Drawing.Size(144, 28);
             this.armoursArray.TabIndex = 23;
             this.armoursArray.Text = "Unique Armours";
             this.armoursArray.UseVisualStyleBackColor = false;
@@ -455,11 +496,12 @@ namespace Deti_PoE_ToolBox
             // 
             this.flasksArray.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.flasksArray.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(44)))), ((int)(((byte)(23)))));
-            this.flasksArray.Font = new System.Drawing.Font("Fontin", 9F, System.Drawing.FontStyle.Bold);
+            this.flasksArray.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.flasksArray.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(170)))), ((int)(((byte)(104)))));
-            this.flasksArray.Location = new System.Drawing.Point(806, 195);
+            this.flasksArray.Location = new System.Drawing.Point(1075, 240);
+            this.flasksArray.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.flasksArray.Name = "flasksArray";
-            this.flasksArray.Size = new System.Drawing.Size(108, 23);
+            this.flasksArray.Size = new System.Drawing.Size(144, 28);
             this.flasksArray.TabIndex = 22;
             this.flasksArray.Text = "Unique Flasks";
             this.flasksArray.UseVisualStyleBackColor = false;
@@ -469,11 +511,12 @@ namespace Deti_PoE_ToolBox
             // 
             this.jewelsArray.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.jewelsArray.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(44)))), ((int)(((byte)(23)))));
-            this.jewelsArray.Font = new System.Drawing.Font("Fontin", 9F, System.Drawing.FontStyle.Bold);
+            this.jewelsArray.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.jewelsArray.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(170)))), ((int)(((byte)(104)))));
-            this.jewelsArray.Location = new System.Drawing.Point(806, 170);
+            this.jewelsArray.Location = new System.Drawing.Point(1075, 209);
+            this.jewelsArray.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.jewelsArray.Name = "jewelsArray";
-            this.jewelsArray.Size = new System.Drawing.Size(108, 23);
+            this.jewelsArray.Size = new System.Drawing.Size(144, 28);
             this.jewelsArray.TabIndex = 21;
             this.jewelsArray.Text = "Unique Jewels";
             this.jewelsArray.UseVisualStyleBackColor = false;
@@ -483,11 +526,12 @@ namespace Deti_PoE_ToolBox
             // 
             this.uniqueMapsArray.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.uniqueMapsArray.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(44)))), ((int)(((byte)(23)))));
-            this.uniqueMapsArray.Font = new System.Drawing.Font("Fontin", 9F, System.Drawing.FontStyle.Bold);
+            this.uniqueMapsArray.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.uniqueMapsArray.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(170)))), ((int)(((byte)(104)))));
-            this.uniqueMapsArray.Location = new System.Drawing.Point(806, 120);
+            this.uniqueMapsArray.Location = new System.Drawing.Point(1075, 148);
+            this.uniqueMapsArray.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.uniqueMapsArray.Name = "uniqueMapsArray";
-            this.uniqueMapsArray.Size = new System.Drawing.Size(108, 23);
+            this.uniqueMapsArray.Size = new System.Drawing.Size(144, 28);
             this.uniqueMapsArray.TabIndex = 20;
             this.uniqueMapsArray.Text = "Unique Maps";
             this.uniqueMapsArray.UseVisualStyleBackColor = false;
@@ -497,11 +541,12 @@ namespace Deti_PoE_ToolBox
             // 
             this.helmEnchantsArray.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.helmEnchantsArray.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(44)))), ((int)(((byte)(23)))));
-            this.helmEnchantsArray.Font = new System.Drawing.Font("Fontin", 9F, System.Drawing.FontStyle.Bold);
+            this.helmEnchantsArray.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.helmEnchantsArray.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(170)))), ((int)(((byte)(104)))));
-            this.helmEnchantsArray.Location = new System.Drawing.Point(689, 95);
+            this.helmEnchantsArray.Location = new System.Drawing.Point(919, 117);
+            this.helmEnchantsArray.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.helmEnchantsArray.Name = "helmEnchantsArray";
-            this.helmEnchantsArray.Size = new System.Drawing.Size(108, 23);
+            this.helmEnchantsArray.Size = new System.Drawing.Size(144, 28);
             this.helmEnchantsArray.TabIndex = 19;
             this.helmEnchantsArray.Text = "Helm Enchants";
             this.helmEnchantsArray.UseVisualStyleBackColor = false;
@@ -511,11 +556,12 @@ namespace Deti_PoE_ToolBox
             // 
             this.scarabsTypesArray.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.scarabsTypesArray.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(44)))), ((int)(((byte)(23)))));
-            this.scarabsTypesArray.Font = new System.Drawing.Font("Fontin", 9F, System.Drawing.FontStyle.Bold);
+            this.scarabsTypesArray.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.scarabsTypesArray.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(170)))), ((int)(((byte)(104)))));
-            this.scarabsTypesArray.Location = new System.Drawing.Point(689, 170);
+            this.scarabsTypesArray.Location = new System.Drawing.Point(919, 209);
+            this.scarabsTypesArray.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.scarabsTypesArray.Name = "scarabsTypesArray";
-            this.scarabsTypesArray.Size = new System.Drawing.Size(108, 23);
+            this.scarabsTypesArray.Size = new System.Drawing.Size(144, 28);
             this.scarabsTypesArray.TabIndex = 18;
             this.scarabsTypesArray.Text = "Scarabs";
             this.scarabsTypesArray.UseVisualStyleBackColor = false;
@@ -524,9 +570,10 @@ namespace Deti_PoE_ToolBox
             // gemsArray
             // 
             this.gemsArray.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.gemsArray.Location = new System.Drawing.Point(806, 94);
+            this.gemsArray.Location = new System.Drawing.Point(1075, 116);
+            this.gemsArray.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gemsArray.Name = "gemsArray";
-            this.gemsArray.Size = new System.Drawing.Size(107, 23);
+            this.gemsArray.Size = new System.Drawing.Size(143, 28);
             this.gemsArray.TabIndex = 17;
             this.gemsArray.Text = "Gems";
             this.gemsArray.UseVisualStyleBackColor = true;
@@ -536,11 +583,12 @@ namespace Deti_PoE_ToolBox
             // 
             this.propheciesArray.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.propheciesArray.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(44)))), ((int)(((byte)(23)))));
-            this.propheciesArray.Font = new System.Drawing.Font("Fontin", 9F, System.Drawing.FontStyle.Bold);
+            this.propheciesArray.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.propheciesArray.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(170)))), ((int)(((byte)(104)))));
-            this.propheciesArray.Location = new System.Drawing.Point(689, 295);
+            this.propheciesArray.Location = new System.Drawing.Point(919, 363);
+            this.propheciesArray.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.propheciesArray.Name = "propheciesArray";
-            this.propheciesArray.Size = new System.Drawing.Size(108, 23);
+            this.propheciesArray.Size = new System.Drawing.Size(144, 28);
             this.propheciesArray.TabIndex = 16;
             this.propheciesArray.Text = "Prophecies";
             this.propheciesArray.UseVisualStyleBackColor = false;
@@ -550,11 +598,12 @@ namespace Deti_PoE_ToolBox
             // 
             this.cardsArray.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.cardsArray.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(44)))), ((int)(((byte)(23)))));
-            this.cardsArray.Font = new System.Drawing.Font("Fontin", 9F, System.Drawing.FontStyle.Bold);
+            this.cardsArray.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.cardsArray.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(170)))), ((int)(((byte)(104)))));
-            this.cardsArray.Location = new System.Drawing.Point(689, 270);
+            this.cardsArray.Location = new System.Drawing.Point(919, 332);
+            this.cardsArray.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cardsArray.Name = "cardsArray";
-            this.cardsArray.Size = new System.Drawing.Size(108, 23);
+            this.cardsArray.Size = new System.Drawing.Size(144, 28);
             this.cardsArray.TabIndex = 15;
             this.cardsArray.Text = "Div. Cards";
             this.cardsArray.UseVisualStyleBackColor = false;
@@ -564,11 +613,12 @@ namespace Deti_PoE_ToolBox
             // 
             this.essencesArray.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.essencesArray.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(44)))), ((int)(((byte)(23)))));
-            this.essencesArray.Font = new System.Drawing.Font("Fontin", 9F, System.Drawing.FontStyle.Bold);
+            this.essencesArray.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.essencesArray.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(170)))), ((int)(((byte)(104)))));
-            this.essencesArray.Location = new System.Drawing.Point(688, 245);
+            this.essencesArray.Location = new System.Drawing.Point(917, 302);
+            this.essencesArray.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.essencesArray.Name = "essencesArray";
-            this.essencesArray.Size = new System.Drawing.Size(108, 23);
+            this.essencesArray.Size = new System.Drawing.Size(144, 28);
             this.essencesArray.TabIndex = 14;
             this.essencesArray.Text = "Essences";
             this.essencesArray.UseVisualStyleBackColor = false;
@@ -578,11 +628,12 @@ namespace Deti_PoE_ToolBox
             // 
             this.resonatorsArray.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.resonatorsArray.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(44)))), ((int)(((byte)(23)))));
-            this.resonatorsArray.Font = new System.Drawing.Font("Fontin", 9F, System.Drawing.FontStyle.Bold);
+            this.resonatorsArray.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.resonatorsArray.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(170)))), ((int)(((byte)(104)))));
-            this.resonatorsArray.Location = new System.Drawing.Point(689, 220);
+            this.resonatorsArray.Location = new System.Drawing.Point(919, 271);
+            this.resonatorsArray.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.resonatorsArray.Name = "resonatorsArray";
-            this.resonatorsArray.Size = new System.Drawing.Size(108, 23);
+            this.resonatorsArray.Size = new System.Drawing.Size(144, 28);
             this.resonatorsArray.TabIndex = 13;
             this.resonatorsArray.Text = "Resonators";
             this.resonatorsArray.UseVisualStyleBackColor = false;
@@ -592,11 +643,12 @@ namespace Deti_PoE_ToolBox
             // 
             this.fragmentsArray.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.fragmentsArray.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(44)))), ((int)(((byte)(23)))));
-            this.fragmentsArray.Font = new System.Drawing.Font("Fontin", 9F, System.Drawing.FontStyle.Bold);
+            this.fragmentsArray.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.fragmentsArray.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(170)))), ((int)(((byte)(104)))));
-            this.fragmentsArray.Location = new System.Drawing.Point(806, 70);
+            this.fragmentsArray.Location = new System.Drawing.Point(1075, 86);
+            this.fragmentsArray.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.fragmentsArray.Name = "fragmentsArray";
-            this.fragmentsArray.Size = new System.Drawing.Size(108, 23);
+            this.fragmentsArray.Size = new System.Drawing.Size(144, 28);
             this.fragmentsArray.TabIndex = 12;
             this.fragmentsArray.Text = "Fragments";
             this.fragmentsArray.UseVisualStyleBackColor = false;
@@ -604,9 +656,10 @@ namespace Deti_PoE_ToolBox
             // 
             // testBox
             // 
-            this.testBox.Location = new System.Drawing.Point(400, 56);
+            this.testBox.Location = new System.Drawing.Point(533, 69);
+            this.testBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.testBox.Name = "testBox";
-            this.testBox.Size = new System.Drawing.Size(282, 197);
+            this.testBox.Size = new System.Drawing.Size(375, 242);
             this.testBox.TabIndex = 11;
             this.testBox.Text = "";
             this.testBox.Visible = false;
@@ -615,9 +668,10 @@ namespace Deti_PoE_ToolBox
             // 
             this.listView2.GridLines = true;
             this.listView2.HideSelection = false;
-            this.listView2.Location = new System.Drawing.Point(834, 223);
+            this.listView2.Location = new System.Drawing.Point(1112, 274);
+            this.listView2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(308, 382);
+            this.listView2.Size = new System.Drawing.Size(409, 469);
             this.listView2.TabIndex = 36;
             this.listView2.UseCompatibleStateImageBehavior = false;
             this.listView2.View = System.Windows.Forms.View.Details;
@@ -635,9 +689,11 @@ namespace Deti_PoE_ToolBox
             this.groupBox2.Controls.Add(this.currencyResultBox);
             this.groupBox2.Enabled = false;
             this.groupBox2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.groupBox2.Location = new System.Drawing.Point(738, 0);
+            this.groupBox2.Location = new System.Drawing.Point(984, 0);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(309, 168);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Size = new System.Drawing.Size(412, 207);
             this.groupBox2.TabIndex = 32;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Conversion Software Version 7.0";
@@ -696,9 +752,10 @@ namespace Deti_PoE_ToolBox
             "Armourer\'s Scrap",
             "Orb of Transmutation",
             "Portal Scroll"});
-            this.currencyList1.Location = new System.Drawing.Point(37, 31);
+            this.currencyList1.Location = new System.Drawing.Point(49, 38);
+            this.currencyList1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.currencyList1.Name = "currencyList1";
-            this.currencyList1.Size = new System.Drawing.Size(98, 21);
+            this.currencyList1.Size = new System.Drawing.Size(129, 24);
             this.currencyList1.TabIndex = 26;
             this.currencyList1.SelectedIndexChanged += new System.EventHandler(this.currencyList1_SelectedIndexChanged);
             this.currencyList1.TextChanged += new System.EventHandler(this.currencyList1_TextChanged);
@@ -709,9 +766,10 @@ namespace Deti_PoE_ToolBox
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(147, 63);
+            this.label1.Location = new System.Drawing.Point(196, 78);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(31, 13);
+            this.label1.Size = new System.Drawing.Size(38, 16);
             this.label1.TabIndex = 31;
             this.label1.Text = "------>";
             // 
@@ -719,9 +777,10 @@ namespace Deti_PoE_ToolBox
             // 
             this.testButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.testButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.testButton.Location = new System.Drawing.Point(97, 110);
+            this.testButton.Location = new System.Drawing.Point(129, 135);
+            this.testButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.testButton.Name = "testButton";
-            this.testButton.Size = new System.Drawing.Size(100, 23);
+            this.testButton.Size = new System.Drawing.Size(133, 28);
             this.testButton.TabIndex = 25;
             this.testButton.Text = "Convert";
             this.testButton.UseVisualStyleBackColor = true;
@@ -734,10 +793,11 @@ namespace Deti_PoE_ToolBox
             this.list2QuantityBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.list2QuantityBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.list2QuantityBox.ForeColor = System.Drawing.Color.Black;
-            this.list2QuantityBox.Location = new System.Drawing.Point(109, 84);
+            this.list2QuantityBox.Location = new System.Drawing.Point(145, 103);
+            this.list2QuantityBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.list2QuantityBox.Name = "list2QuantityBox";
             this.list2QuantityBox.ReadOnly = true;
-            this.list2QuantityBox.Size = new System.Drawing.Size(77, 20);
+            this.list2QuantityBox.Size = new System.Drawing.Size(102, 23);
             this.list2QuantityBox.TabIndex = 30;
             this.list2QuantityBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.list2QuantityBox.TextChanged += new System.EventHandler(this.list2QuantityBox_TextChanged);
@@ -795,48 +855,37 @@ namespace Deti_PoE_ToolBox
             "Armourer\'s Scrap",
             "Orb of Transmutation",
             "Portal Scroll"});
-            this.currencyList2.Location = new System.Drawing.Point(164, 31);
+            this.currencyList2.Location = new System.Drawing.Point(219, 38);
+            this.currencyList2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.currencyList2.Name = "currencyList2";
-            this.currencyList2.Size = new System.Drawing.Size(98, 21);
+            this.currencyList2.Size = new System.Drawing.Size(129, 24);
             this.currencyList2.TabIndex = 27;
             this.currencyList2.SelectedIndexChanged += new System.EventHandler(this.currencyList2_SelectedIndexChanged);
             // 
             // list1QuantityBox
             // 
             this.list1QuantityBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.list1QuantityBox.Location = new System.Drawing.Point(72, 58);
+            this.list1QuantityBox.Location = new System.Drawing.Point(96, 71);
+            this.list1QuantityBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.list1QuantityBox.Name = "list1QuantityBox";
-            this.list1QuantityBox.Size = new System.Drawing.Size(34, 20);
+            this.list1QuantityBox.Size = new System.Drawing.Size(44, 22);
             this.list1QuantityBox.TabIndex = 29;
             this.list1QuantityBox.TextChanged += new System.EventHandler(this.list1QuantityBox_TextChanged);
             // 
             // currencyResultBox
             // 
             this.currencyResultBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.currencyResultBox.Location = new System.Drawing.Point(193, 58);
+            this.currencyResultBox.Location = new System.Drawing.Point(257, 71);
+            this.currencyResultBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.currencyResultBox.Name = "currencyResultBox";
-            this.currencyResultBox.Size = new System.Drawing.Size(34, 20);
+            this.currencyResultBox.Size = new System.Drawing.Size(44, 22);
             this.currencyResultBox.TabIndex = 28;
-            // 
-            // seedsArray
-            // 
-            this.seedsArray.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.seedsArray.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(44)))), ((int)(((byte)(23)))));
-            this.seedsArray.Font = new System.Drawing.Font("Fontin", 9F, System.Drawing.FontStyle.Bold);
-            this.seedsArray.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(170)))), ((int)(((byte)(104)))));
-            this.seedsArray.Location = new System.Drawing.Point(806, 45);
-            this.seedsArray.Name = "seedsArray";
-            this.seedsArray.Size = new System.Drawing.Size(108, 23);
-            this.seedsArray.TabIndex = 48;
-            this.seedsArray.Text = "Seeds";
-            this.seedsArray.UseVisualStyleBackColor = false;
-            this.seedsArray.Click += new System.EventHandler(this.seedsArray_Click);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(933, 549);
+            this.ClientSize = new System.Drawing.Size(1244, 676);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.listView2);
             this.Controls.Add(this.groupBox2);
@@ -845,10 +894,11 @@ namespace Deti_PoE_ToolBox
             this.Controls.Add(this.getCurrency);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Deti Poe ToolBox 0.81 League: Delirium";
+            this.Text = "Deti Poe ToolBox";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
             this.groupBox1.ResumeLayout(false);
