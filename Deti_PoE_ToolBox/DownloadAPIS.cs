@@ -35,8 +35,8 @@ namespace Deti_PoE_ToolBox
 
             using (var webClient = new System.Net.WebClient())
             {
-
-                info = webClient.DownloadString("https://poe.ninja/api/Data/currencyoverview?league=" + league + "&type=Currency");
+                Console.WriteLine($"Getting info from {league} league");
+                info = webClient.DownloadString("https://poe.ninja/api/data/currencyoverview?league=" + league + "&type=Currency");
                 return info;
 
             }

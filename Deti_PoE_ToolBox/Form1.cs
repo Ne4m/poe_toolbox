@@ -96,12 +96,12 @@ namespace Deti_PoE_ToolBox
         DownloadAPIS dlapi = new DownloadAPIS();
         
 
-        public double ChaosExaltedRate;
+        public double ChaosDivineRate;
         public double orbChaosValue;
         public string newinput;
         public string lastclicked;
         public string league;// = "Heist";
-        private string version = "0.84";
+        private string version = "0.84a";
         public static string jsonpath = "currency.json";
         public dynamic myJsonData;
 
@@ -110,12 +110,29 @@ namespace Deti_PoE_ToolBox
             var jsonReturn = JsonConvert.DeserializeObject<List<JStructure.LeagueInfo>>(dlapi.getLeagueInfo());
 
 
-            this.league = jsonReturn[2].name;
+            //this.league = jsonReturn[0].name;
 
             for (int i=0; i<jsonReturn.Count; i++)
             {
-                Console.WriteLine(jsonReturn[i].name);
-                leagueBox.Items.Add(jsonReturn[i].name);
+                var input = jsonReturn[i].name;
+
+                if(!input.Contains("Standard") &&
+                    !input.Contains("Hardcore") &&
+                    !input.Contains("Solo Self-Found") &&
+                    !input.Contains("Ruthless") &&
+                    !input.Contains("Hardcore Ruthless") &&
+                    !input.Contains("HC Ruthless"))
+                {
+                    this.league = jsonReturn[i].name;
+                }
+
+                if(!input.Contains("Solo Self-Found"))
+                {
+                    Console.WriteLine(jsonReturn[i].name);
+                    leagueBox.Items.Add(jsonReturn[i].name);
+                }
+
+
             }
             
         }
@@ -132,13 +149,16 @@ namespace Deti_PoE_ToolBox
 
         }
 
-        public void getChaosExaltedRate()
+        public void GetChaosDivineRate()
         {
             var jsonReturn = JsonConvert.DeserializeObject<JStructure.Currencies>(dlapi.getCurrencyInfo());
 
             foreach (var c in jsonReturn.lines)
             {
-                if (c.currencyTypeName == "Exalted Orb") { ChaosExaltedRate = c.chaosEquivalent; }
+                Console.WriteLine($"{c.currencyTypeName} Value is: {c.chaosEquivalent} in {league} ");
+                if (c.currencyTypeName == "Divine Orb") {
+                    ChaosDivineRate = c.chaosEquivalent; 
+                }
             }
         }
       
@@ -186,7 +206,7 @@ namespace Deti_PoE_ToolBox
 
             updateTitle(league);
             leagueBox.Text = league;
-            getChaosExaltedRate();
+            GetChaosDivineRate();
 
         }
 
@@ -222,22 +242,22 @@ namespace Deti_PoE_ToolBox
             listView1.Columns.Clear();
             listView1.Columns.Add("Name");
             listView1.Columns.Add("Chaos Value");
-            listView1.Columns.Add("Exalted Value");
+            listView1.Columns.Add("Divine Value");
 
             foreach (var c in jsonReturn.lines)
             {
-                //if (c.currencyTypeName == "Exalted Orb") { ChaosExaltedRate = c.chaosEquivalent; }
-                richTextBox1.Text = richTextBox1.Text + c.currencyTypeName + ": " + c.chaosEquivalent + " c / " + String.Format("{0:0.00}", (c.chaosEquivalent/ ChaosExaltedRate)) + " Ex\n";
+                //if (c.currencyTypeName == "Exalted Orb") { ChaosDivineRate = c.chaosEquivalent; }
+                richTextBox1.Text = richTextBox1.Text + c.currencyTypeName + ": " + c.chaosEquivalent + " c / " + String.Format("{0:0.00}", (c.chaosEquivalent/ ChaosDivineRate)) + " Div\n";
 
                 ListViewItem test = new ListViewItem(c.currencyTypeName);
                 test.SubItems.Add(c.chaosEquivalent.ToString());
-                test.SubItems.Add( String.Format("{0:0.00}", (c.chaosEquivalent / ChaosExaltedRate)) );
+                test.SubItems.Add( String.Format("{0:0.00}", (c.chaosEquivalent / ChaosDivineRate)) );
                 listView1.Items.Add(test);
             }
 
             listView1.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
             listView1.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
-            Console.WriteLine("Exalted Chaos Rate is: " + ChaosExaltedRate);
+            Console.WriteLine("Divine Chaos Rate is: " + ChaosDivineRate);
             listView2.Items.Clear();
             CopySelectedItems(listView1, listView2);
 
@@ -254,15 +274,15 @@ namespace Deti_PoE_ToolBox
             listView1.Columns.Clear();
             listView1.Columns.Add("Name");
             listView1.Columns.Add("Chaos Value");
-            listView1.Columns.Add("Exalted Value");               
+            listView1.Columns.Add("Divine Value");               
 
             foreach (var c in jsonReturn.lines)
             {
-                richTextBox1.Text = richTextBox1.Text + c.currencyTypeName + ": " + c.chaosEquivalent + " c / " + String.Format("{0:0.00}", (c.chaosEquivalent / ChaosExaltedRate)) + " Ex\n";
+                richTextBox1.Text = richTextBox1.Text + c.currencyTypeName + ": " + c.chaosEquivalent + " c / " + String.Format("{0:0.00}", (c.chaosEquivalent / ChaosDivineRate)) + " Ex\n";
 
                 ListViewItem test = new ListViewItem(c.currencyTypeName);
                 test.SubItems.Add(c.chaosEquivalent.ToString());
-                test.SubItems.Add(String.Format("{0:0.00}", (c.chaosEquivalent / ChaosExaltedRate)));
+                test.SubItems.Add(String.Format("{0:0.00}", (c.chaosEquivalent / ChaosDivineRate)));
                 listView1.Items.Add(test);
             }
 
@@ -283,16 +303,16 @@ namespace Deti_PoE_ToolBox
             listView1.Columns.Clear();
             listView1.Columns.Add("Name");
             listView1.Columns.Add("Chaos Value");
-            listView1.Columns.Add("Exalted Value");
+            listView1.Columns.Add("Divine Value");
             listView1.Columns.Add("Description"); 
 
             foreach (var c in jsonReturn.lines)
             {
-                richTextBox1.Text = richTextBox1.Text + c.name + ": " + c.chaosValue + " c / " + String.Format("{0:0.00}", c.exaltedValue) + " Ex\n";
+                richTextBox1.Text = richTextBox1.Text + c.name + ": " + c.chaosValue + " c / " + String.Format("{0:0.00}", c.chaosValue / ChaosDivineRate) + " Ex\n";
 
                 ListViewItem test = new ListViewItem(c.name);
                 test.SubItems.Add(c.chaosValue.ToString());
-                test.SubItems.Add(String.Format("{0:0.00}", (c.exaltedValue)));
+                test.SubItems.Add(String.Format("{0:0.00}", (c.chaosValue / ChaosDivineRate)));
                 test.SubItems.Add(c.explicitModifiers[0].text);
                 listView1.Items.Add(test);
             }
@@ -314,15 +334,15 @@ namespace Deti_PoE_ToolBox
             listView1.Columns.Clear();
             listView1.Columns.Add("Name");
             listView1.Columns.Add("Chaos Value");
-            listView1.Columns.Add("Exalted Value");
+            listView1.Columns.Add("Divine Value");
 
             foreach (var c in jsonReturn.lines)
             {
-                richTextBox1.Text = richTextBox1.Text + c.name + ": " + c.chaosValue + " c / " + String.Format("{0:0.00}", c.exaltedValue) + " Ex\n";
+                richTextBox1.Text = richTextBox1.Text + c.name + ": " + c.chaosValue + " c / " + String.Format("{0:0.00}", c.chaosValue / ChaosDivineRate) + " Ex\n";
 
                 ListViewItem test = new ListViewItem(c.name);
                 test.SubItems.Add(c.chaosValue.ToString());
-                test.SubItems.Add(String.Format("{0:0.00}", (c.exaltedValue)));
+                test.SubItems.Add(String.Format("{0:0.00}", (c.chaosValue / ChaosDivineRate)));
                 listView1.Items.Add(test);
             }
 
@@ -343,16 +363,16 @@ namespace Deti_PoE_ToolBox
             listView1.Columns.Clear();
             listView1.Columns.Add("Name");
             listView1.Columns.Add("Chaos Value");
-            listView1.Columns.Add("Exalted Value");
+            listView1.Columns.Add("Divine Value");
             listView1.Columns.Add("Description");
 
             foreach (var c in jsonReturn.lines)
             {
-                richTextBox1.Text = richTextBox1.Text + c.name + ": " + c.chaosValue + " c / " + String.Format("{0:0.00}", c.exaltedValue) + " Ex\n";
+                richTextBox1.Text = richTextBox1.Text + c.name + ": " + c.chaosValue + " c / " + String.Format("{0:0.00}", c.chaosValue / ChaosDivineRate) + " Ex\n";
 
                 ListViewItem test = new ListViewItem(c.name);
                 test.SubItems.Add(c.chaosValue.ToString());
-                test.SubItems.Add(String.Format("{0:0.00}", (c.exaltedValue)));
+                test.SubItems.Add(String.Format("{0:0.00}", (c.chaosValue / ChaosDivineRate)));
                 test.SubItems.Add(c.explicitModifiers[0].text);
                 listView1.Items.Add(test);
             }
@@ -374,16 +394,16 @@ namespace Deti_PoE_ToolBox
             listView1.Columns.Add("Name");
             listView1.Columns.Add("Stack Size");
             listView1.Columns.Add("Chaos Value");
-            listView1.Columns.Add("Exalted Value");
+            listView1.Columns.Add("Divine Value");
 
             foreach (var c in jsonReturn.lines)
             {
-                richTextBox1.Text = richTextBox1.Text + c.name + ": " + c.chaosValue + " c / " + String.Format("{0:0.00}", c.exaltedValue) + " Ex\n";
+                richTextBox1.Text = richTextBox1.Text + c.name + ": " + c.chaosValue + " c / " + String.Format("{0:0.00}", c.chaosValue / ChaosDivineRate) + " Ex\n";
 
                 ListViewItem test = new ListViewItem(c.name);
                 test.SubItems.Add(c.stackSize);
                 test.SubItems.Add(c.chaosValue.ToString());
-                test.SubItems.Add(String.Format("{0:0.00}", (c.exaltedValue)));
+                test.SubItems.Add(String.Format("{0:0.00}", (c.chaosValue / ChaosDivineRate)));
                 listView1.Items.Add(test);
             }
             listView1.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
@@ -403,16 +423,16 @@ namespace Deti_PoE_ToolBox
             listView1.Columns.Clear();
             listView1.Columns.Add("Name");
             listView1.Columns.Add("Chaos Value");
-            listView1.Columns.Add("Exalted Value");
+            listView1.Columns.Add("Divine Value");
             listView1.Columns.Add("Description");
 
             foreach (var c in jsonReturn.lines)
             {
-                richTextBox1.Text = richTextBox1.Text + c.name + ": " + c.chaosValue + " c / " + String.Format("{0:0.00}", c.exaltedValue) + " Ex\n";
+                richTextBox1.Text = richTextBox1.Text + c.name + ": " + c.chaosValue + " c / " + String.Format("{0:0.00}", c.chaosValue / ChaosDivineRate) + " Ex\n";
 
                 ListViewItem test = new ListViewItem(c.name);
                 test.SubItems.Add(c.chaosValue.ToString());
-                test.SubItems.Add(String.Format("{0:0.00}", (c.exaltedValue)));
+                test.SubItems.Add(String.Format("{0:0.00}", (c.chaosValue / ChaosDivineRate)));
                 test.SubItems.Add(c.prophecyText);
                 listView1.Items.Add(test);
             }
@@ -437,7 +457,7 @@ namespace Deti_PoE_ToolBox
             listView1.Columns.Add("Quality");
             listView1.Columns.Add("Corrupt");
             listView1.Columns.Add("Chaos Value");
-            listView1.Columns.Add("Exalted Value");
+            listView1.Columns.Add("Divine Value");
 
 
             foreach (var c in jsonReturn.lines)
@@ -445,7 +465,7 @@ namespace Deti_PoE_ToolBox
 
              /*   if (c.variant == "21/23c")
                 {
-                    testBox.Text = testBox.Text + " [" + c.variant + "] " + c.name + ": " + c.chaosValue + " c / " + String.Format("{0:0.00}", c.exaltedValue) + " Ex\n";
+                    testBox.Text = testBox.Text + " [" + c.variant + "] " + c.name + ": " + c.chaosValue + " c / " + String.Format("{0:0.00}", c.chaosValue / ChaosDivineRate) + " Ex\n";
 
                 }
                 else
@@ -453,14 +473,14 @@ namespace Deti_PoE_ToolBox
                 }
             */
 
-                richTextBox1.Text = richTextBox1.Text + " [" + c.variant + "] " + c.name + ": " + c.chaosValue + " c / " + String.Format("{0:0.00}", c.exaltedValue) + " Ex\n";
+                richTextBox1.Text = richTextBox1.Text + " [" + c.variant + "] " + c.name + ": " + c.chaosValue + " c / " + String.Format("{0:0.00}", c.chaosValue / ChaosDivineRate) + " Ex\n";
             ListViewItem test = new ListViewItem(c.name);
             test.SubItems.Add(c.gemLevel.ToString());
             test.SubItems.Add(c.gemQuality.ToString());
             if (c.corrupted == true) { test.SubItems.Add("Yes"); }
             else { test.SubItems.Add("No"); }
             test.SubItems.Add(c.chaosValue.ToString());
-            test.SubItems.Add(String.Format("{0:0.00}", (c.exaltedValue)));
+            test.SubItems.Add(String.Format("{0:0.00}", (c.chaosValue / ChaosDivineRate)));
             listView1.Items.Add(test);
                 
             }
@@ -481,16 +501,16 @@ namespace Deti_PoE_ToolBox
             listView1.Columns.Clear();
             listView1.Columns.Add("Name");
             listView1.Columns.Add("Chaos Value");
-            listView1.Columns.Add("Exalted Value");
+            listView1.Columns.Add("Divine Value");
             listView1.Columns.Add("Description");
 
             foreach (var c in jsonReturn.lines)
             {
-                richTextBox1.Text = richTextBox1.Text + c.name + ": " + c.chaosValue + " c / " + String.Format("{0:0.00}", c.exaltedValue) + " Ex\n";
+                richTextBox1.Text = richTextBox1.Text + c.name + ": " + c.chaosValue + " c / " + String.Format("{0:0.00}", c.chaosValue / ChaosDivineRate) + " Ex\n";
 
                 ListViewItem test = new ListViewItem(c.name);
                 test.SubItems.Add(c.chaosValue.ToString());
-                test.SubItems.Add(String.Format("{0:0.00}", (c.exaltedValue)));
+                test.SubItems.Add(String.Format("{0:0.00}", (c.chaosValue / ChaosDivineRate)));
                 test.SubItems.Add(c.explicitModifiers[0].text);
                 listView1.Items.Add(test);
             }
@@ -512,15 +532,15 @@ namespace Deti_PoE_ToolBox
             listView1.Columns.Clear();
             listView1.Columns.Add("Name");
             listView1.Columns.Add("Chaos Value");
-            listView1.Columns.Add("Exalted Value");
+            listView1.Columns.Add("Divine Value");
 
             foreach (var c in jsonReturn.lines)
             {
-                richTextBox1.Text = richTextBox1.Text + c.name + ": " + c.chaosValue + " c / " + String.Format("{0:0.00}", c.exaltedValue) + " Ex\n";
+                richTextBox1.Text = richTextBox1.Text + c.name + ": " + c.chaosValue + " c / " + String.Format("{0:0.00}", c.chaosValue / ChaosDivineRate) + " Ex\n";
 
                 ListViewItem test = new ListViewItem(c.name);
                 test.SubItems.Add(c.chaosValue.ToString());
-                test.SubItems.Add(String.Format("{0:0.00}", (c.exaltedValue)));
+                test.SubItems.Add(String.Format("{0:0.00}", (c.chaosValue / ChaosDivineRate)));
                 listView1.Items.Add(test);
             }
             listView1.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
@@ -541,16 +561,16 @@ namespace Deti_PoE_ToolBox
             listView1.Columns.Add("Name");
             listView1.Columns.Add("Tier");
             listView1.Columns.Add("Chaos Value");
-            listView1.Columns.Add("Exalted Value");
+            listView1.Columns.Add("Divine Value");
 
             foreach (var c in jsonReturn.lines)
             {
-                richTextBox1.Text = richTextBox1.Text + "T" + c.mapTier + " " + c.name + " " + c.chaosValue + " c / " + String.Format("{0:0.00}", c.exaltedValue) + " Ex\n";
+                richTextBox1.Text = richTextBox1.Text + "T" + c.mapTier + " " + c.name + " " + c.chaosValue + " c / " + String.Format("{0:0.00}", c.chaosValue / ChaosDivineRate) + " Ex\n";
 
                 ListViewItem test = new ListViewItem(c.name);
                 test.SubItems.Add(c.mapTier.ToString());
                 test.SubItems.Add(c.chaosValue.ToString());
-                test.SubItems.Add(String.Format("{0:0.00}", (c.exaltedValue)));
+                test.SubItems.Add(String.Format("{0:0.00}", (c.chaosValue / ChaosDivineRate)));
                 listView1.Items.Add(test);
             }
             listView1.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
@@ -573,16 +593,16 @@ namespace Deti_PoE_ToolBox
             listView1.Columns.Add("Name");
             listView1.Columns.Add("Tier");
             listView1.Columns.Add("Chaos Value");
-            listView1.Columns.Add("Exalted Value");
+            listView1.Columns.Add("Divine Value");
 
             foreach (var c in jsonReturn.lines)
             {
-                richTextBox1.Text = richTextBox1.Text + "T" + c.mapTier + " " + c.name + " " + c.chaosValue + " c / " + String.Format("{0:0.00}", c.exaltedValue) + " Ex\n";
+                richTextBox1.Text = richTextBox1.Text + "T" + c.mapTier + " " + c.name + " " + c.chaosValue + " c / " + String.Format("{0:0.00}", c.chaosValue / ChaosDivineRate) + " Ex\n";
 
                 ListViewItem test = new ListViewItem(c.name);
                 test.SubItems.Add(c.mapTier.ToString());
                 test.SubItems.Add(c.chaosValue.ToString());
-                test.SubItems.Add(String.Format("{0:0.00}", (c.exaltedValue)));
+                test.SubItems.Add(String.Format("{0:0.00}", (c.chaosValue / ChaosDivineRate)));
                 listView1.Items.Add(test);
             }
             listView1.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
@@ -609,15 +629,15 @@ namespace Deti_PoE_ToolBox
             listView1.Columns.Clear();
             listView1.Columns.Add("Name");
             listView1.Columns.Add("Chaos Value");
-            listView1.Columns.Add("Exalted Value");
+            listView1.Columns.Add("Divine Value");
 
             foreach (var c in jsonReturn.lines)
             {
-                richTextBox1.Text = richTextBox1.Text + c.name + ": " + c.chaosValue + " c / " + String.Format("{0:0.00}", c.exaltedValue) + " Ex\n";
+                richTextBox1.Text = richTextBox1.Text + c.name + ": " + c.chaosValue + " c / " + String.Format("{0:0.00}", c.chaosValue / ChaosDivineRate) + " Ex\n";
 
                 ListViewItem test = new ListViewItem(c.name);
                 test.SubItems.Add(c.chaosValue.ToString());
-                test.SubItems.Add(String.Format("{0:0.00}", (c.exaltedValue)));
+                test.SubItems.Add(String.Format("{0:0.00}", (c.chaosValue / ChaosDivineRate)));
                 listView1.Items.Add(test);
             }
             listView1.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
@@ -638,25 +658,25 @@ namespace Deti_PoE_ToolBox
             listView1.Columns.Add("Name");
             listView1.Columns.Add("Relic");
             listView1.Columns.Add("Chaos Value");
-            listView1.Columns.Add("Exalted Value");
+            listView1.Columns.Add("Divine Value");
 
 
             foreach (var c in jsonReturn.lines)
             {
                 if (c.itemClass == 9) // RELIC ITEMCLASS ID
                 {
-                    richTextBox1.Text = richTextBox1.Text + c.name + " [R] " + c.chaosValue + " c / " + String.Format("{0:0.00}", c.exaltedValue) + " Ex\n";
+                    richTextBox1.Text = richTextBox1.Text + c.name + " [R] " + c.chaosValue + " c / " + String.Format("{0:0.00}", c.chaosValue / ChaosDivineRate) + " Ex\n";
                 }
                 if (c.itemClass == 3) // NON-RELIC ITEMCLASS ID
                 {
-                    richTextBox1.Text = richTextBox1.Text + c.name + ": " + c.chaosValue + " c / " + String.Format("{0:0.00}", c.exaltedValue) + " Ex\n";
+                    richTextBox1.Text = richTextBox1.Text + c.name + ": " + c.chaosValue + " c / " + String.Format("{0:0.00}", c.chaosValue / ChaosDivineRate) + " Ex\n";
                 }
 
                 ListViewItem test = new ListViewItem(c.name);
                 if (c.itemClass == 9) { test.SubItems.Add("Yes"); }
                 else { test.SubItems.Add("No"); }
                 test.SubItems.Add(c.chaosValue.ToString());
-                test.SubItems.Add(String.Format("{0:0.00}", (c.exaltedValue)));
+                test.SubItems.Add(String.Format("{0:0.00}", (c.chaosValue / ChaosDivineRate)));
                 listView1.Items.Add(test);
             }
             listView1.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
@@ -678,7 +698,7 @@ namespace Deti_PoE_ToolBox
             listView1.Columns.Add("Relic");
             listView1.Columns.Add("Links");
             listView1.Columns.Add("Chaos Value");
-            listView1.Columns.Add("Exalted Value");
+            listView1.Columns.Add("Divine Value");
 
             GetUserInput getInput = new GetUserInput();
             DialogResult result = getInput.ShowDialog();
@@ -698,7 +718,7 @@ namespace Deti_PoE_ToolBox
                             else { test.SubItems.Add("No"); }
                             test.SubItems.Add(c.links.ToString());
                             test.SubItems.Add(c.chaosValue.ToString());
-                            test.SubItems.Add(String.Format("{0:0.00}", (c.exaltedValue)));
+                            test.SubItems.Add(String.Format("{0:0.00}", (c.chaosValue / ChaosDivineRate)));
                             listView1.Items.Add(test);
                         }
                     }
@@ -714,7 +734,7 @@ namespace Deti_PoE_ToolBox
                             else { test.SubItems.Add("No"); }
                             test.SubItems.Add(c.links.ToString());
                             test.SubItems.Add(c.chaosValue.ToString());
-                            test.SubItems.Add(String.Format("{0:0.00}", (c.exaltedValue)));
+                            test.SubItems.Add(String.Format("{0:0.00}", (c.chaosValue / ChaosDivineRate)));
                             listView1.Items.Add(test);
                         }
                     }
@@ -726,12 +746,12 @@ namespace Deti_PoE_ToolBox
             {
                 if (c.links == 6)
                 {
-                    testBox.Text = testBox.Text + "[" + c.links + "L] " + c.name + " [R] " + c.chaosValue + " c / " + String.Format("{0:0.00}", c.exaltedValue) + " Ex\n";
+                    testBox.Text = testBox.Text + "[" + c.links + "L] " + c.name + " [R] " + c.chaosValue + " c / " + String.Format("{0:0.00}", c.chaosValue / ChaosDivineRate) + " Ex\n";
 
                 }
                 else
                 {
-                    richTextBox1.Text = richTextBox1.Text + "[" + c.links + "L] " + c.name + " [R] " + c.chaosValue + " c / " + String.Format("{0:0.00}", c.exaltedValue) + " Ex\n";
+                    richTextBox1.Text = richTextBox1.Text + "[" + c.links + "L] " + c.name + " [R] " + c.chaosValue + " c / " + String.Format("{0:0.00}", c.chaosValue / ChaosDivineRate) + " Ex\n";
                 }
             }
             else
@@ -739,12 +759,12 @@ namespace Deti_PoE_ToolBox
             {
                 if (c.links == 6)
                 {
-                    testBox.Text = testBox.Text + "[" + c.links + "L] " + c.name + ": " + c.chaosValue + " c / " + String.Format("{0:0.00}", c.exaltedValue) + " Ex\n";
+                    testBox.Text = testBox.Text + "[" + c.links + "L] " + c.name + ": " + c.chaosValue + " c / " + String.Format("{0:0.00}", c.chaosValue / ChaosDivineRate) + " Ex\n";
 
                 }
                 else
                 {
-                    richTextBox1.Text = richTextBox1.Text + "[" + c.links + "L] " + c.name + ": " + c.chaosValue + " c / " + String.Format("{0:0.00}", c.exaltedValue) + " Ex\n";
+                    richTextBox1.Text = richTextBox1.Text + "[" + c.links + "L] " + c.name + ": " + c.chaosValue + " c / " + String.Format("{0:0.00}", c.chaosValue / ChaosDivineRate) + " Ex\n";
                 }
             }*/
 
@@ -767,7 +787,7 @@ namespace Deti_PoE_ToolBox
             listView1.Columns.Add("Relic");
             listView1.Columns.Add("Links");
             listView1.Columns.Add("Chaos Value");
-            listView1.Columns.Add("Exalted Value");
+            listView1.Columns.Add("Divine Value");
 
             GetUserInput getInput = new GetUserInput();
             DialogResult result = getInput.ShowDialog();
@@ -787,7 +807,7 @@ namespace Deti_PoE_ToolBox
                             else { test.SubItems.Add("No"); }
                             test.SubItems.Add(c.links.ToString());
                             test.SubItems.Add(c.chaosValue.ToString());
-                            test.SubItems.Add(String.Format("{0:0.00}", (c.exaltedValue)));
+                            test.SubItems.Add(String.Format("{0:0.00}", (c.chaosValue / ChaosDivineRate)));
                             listView1.Items.Add(test);
                         }
                     }
@@ -803,7 +823,7 @@ namespace Deti_PoE_ToolBox
                             else { test.SubItems.Add("No"); }
                             test.SubItems.Add(c.links.ToString());
                             test.SubItems.Add(c.chaosValue.ToString());
-                            test.SubItems.Add(String.Format("{0:0.00}", (c.exaltedValue)));
+                            test.SubItems.Add(String.Format("{0:0.00}", (c.chaosValue / ChaosDivineRate)));
                             listView1.Items.Add(test);
                         }
                     }
@@ -836,19 +856,19 @@ namespace Deti_PoE_ToolBox
             listView1.Columns.Add("Name");
             listView1.Columns.Add("Relic");
             listView1.Columns.Add("Chaos Value");
-            listView1.Columns.Add("Exalted Value");
+            listView1.Columns.Add("Divine Value");
 
             foreach (var c in jsonReturn.lines)
             {
                 if (c.itemClass == 9) // RELIC ITEMCLASS ID
                 {
-                    richTextBox1.Text = richTextBox1.Text + c.name + " [R] " + c.chaosValue + " c / " + String.Format("{0:0.00}", (c.chaosValue / ChaosExaltedRate)) + " Ex\n";
+                    richTextBox1.Text = richTextBox1.Text + c.name + " [R] " + c.chaosValue + " c / " + String.Format("{0:0.00}", (c.chaosValue / ChaosDivineRate)) + " Ex\n";
 
                 }
                 else
                 if (c.itemClass == 3) // NON-RELIC ITEMCLASS ID
                 {
-                    richTextBox1.Text = richTextBox1.Text + c.name + ": " + c.chaosValue + " c / " + String.Format("{0:0.00}", (c.chaosValue / ChaosExaltedRate)) + " Ex\n";
+                    richTextBox1.Text = richTextBox1.Text + c.name + ": " + c.chaosValue + " c / " + String.Format("{0:0.00}", (c.chaosValue / ChaosDivineRate)) + " Ex\n";
 
                 }
 
@@ -856,7 +876,7 @@ namespace Deti_PoE_ToolBox
                 if (c.itemClass == 9) { test.SubItems.Add("Yes"); }
                 else { test.SubItems.Add("No"); }
                 test.SubItems.Add(c.chaosValue.ToString());
-                test.SubItems.Add(String.Format("{0:0.00}", (c.exaltedValue)));
+                test.SubItems.Add(String.Format("{0:0.00}", (c.chaosValue / ChaosDivineRate)));
                 listView1.Items.Add(test);
             }
             listView1.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
@@ -1110,16 +1130,16 @@ namespace Deti_PoE_ToolBox
             listView1.Columns.Clear();
             listView1.Columns.Add("Name");
             listView1.Columns.Add("Chaos Value");
-            listView1.Columns.Add("Exalted Value");
+            listView1.Columns.Add("Divine Value");
             listView1.Columns.Add("Description");
 
             foreach (var c in jsonReturn.lines)
             {
-                richTextBox1.Text = richTextBox1.Text + c.name + ": " + c.chaosValue + " c / " + String.Format("{0:0.00}", c.exaltedValue) + " Ex\n";
+                richTextBox1.Text = richTextBox1.Text + c.name + ": " + c.chaosValue + " c / " + String.Format("{0:0.00}", c.chaosValue / ChaosDivineRate) + " Ex\n";
 
                 ListViewItem test = new ListViewItem(c.name);
                 test.SubItems.Add(c.chaosValue.ToString());
-                test.SubItems.Add(String.Format("{0:0.00}", (c.exaltedValue)));
+                test.SubItems.Add(String.Format("{0:0.00}", (c.chaosValue / ChaosDivineRate)));
                 test.SubItems.Add(c.variant);
                 listView1.Items.Add(test);
             }
@@ -1141,16 +1161,16 @@ namespace Deti_PoE_ToolBox
             listView1.Columns.Clear();
             listView1.Columns.Add("Name");
             listView1.Columns.Add("Chaos Value");
-            listView1.Columns.Add("Exalted Value");
+            listView1.Columns.Add("Divine Value");
             listView1.Columns.Add("Description");
 
             foreach (var c in jsonReturn.lines)
             {
-                richTextBox1.Text = richTextBox1.Text + c.name + ": " + c.chaosValue + " c / " + String.Format("{0:0.00}", c.exaltedValue) + " Ex\n";
+                richTextBox1.Text = richTextBox1.Text + c.name + ": " + c.chaosValue + " c / " + String.Format("{0:0.00}", c.chaosValue / ChaosDivineRate) + " Ex\n";
 
                 ListViewItem test = new ListViewItem(c.name);
                 test.SubItems.Add(c.chaosValue.ToString());
-                test.SubItems.Add(String.Format("{0:0.00}", (c.exaltedValue)));
+                test.SubItems.Add(String.Format("{0:0.00}", (c.chaosValue / ChaosDivineRate)));
                 test.SubItems.Add(c.variant);
                 listView1.Items.Add(test);
             }
@@ -1164,23 +1184,53 @@ namespace Deti_PoE_ToolBox
         private void leagueBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             string tmpLeague = league;
+            Console.WriteLine($"league is {tmpLeague}");
 
-            if (leagueBox.Text == league)
+
+            if (leagueBox.Text.Contains("Ruthless"))
             {
-                // Default League Do Nothing
-                tmpLeague = league;
-            }
-            else if (leagueBox.Text == "Standard")
-            {
-                tmpLeague = "Standard";
-            }
-            else if (leagueBox.Text == "Hardcore")
-            {
-                tmpLeague = "Hardcore";
+                if (leagueBox.Text.Contains($"{league}"))
+                {
+                    if (leagueBox.Text.Contains("HC"))
+                    {
+                        tmpLeague = $"HC+Ruthless+{league}";
+                    }
+                    else
+                    {
+                        tmpLeague = $"Ruthless+{league}";
+                    }
+                }
+                else
+                {
+                    if (leagueBox.Text.Contains("HC"))
+                    {
+                        tmpLeague = $"Hardcore+Ruthless";
+                    }
+                    else
+                    {
+                        tmpLeague = $"Ruthless";
+                    }
+                }
             }
             else
             {
-                tmpLeague = "Hardcore%20" + league;
+                if (leagueBox.Text == league)
+                {
+                    // Default League Do Nothing
+                    tmpLeague = league;
+                }
+                else if (leagueBox.Text == "Standard")
+                {
+                    tmpLeague = "Standard";
+                }
+                else if (leagueBox.Text == "Hardcore")
+                {
+                    tmpLeague = "Hardcore";
+                }
+                else
+                {
+                    tmpLeague = "Hardcore+" + league;
+                }
             }
 
             dlapi.league = tmpLeague;
@@ -1188,7 +1238,7 @@ namespace Deti_PoE_ToolBox
             listView1.Items.Clear();
             listView1.Columns.Clear();
 
-            if (tmpLeague.Contains("Hardcore%20"))
+            if (tmpLeague.Contains("Hardcore+"))
             {
                 tmpLeague = "Hardcore " + league;
             }
@@ -1208,16 +1258,16 @@ namespace Deti_PoE_ToolBox
             listView1.Columns.Clear();
             listView1.Columns.Add("Name");
             listView1.Columns.Add("Chaos Value");
-            listView1.Columns.Add("Exalted Value");
+            listView1.Columns.Add("Divine Value");
             listView1.Columns.Add("Description"); //                 test.SubItems.Add(c.explicitModifiers[0].text);
 
             foreach (var c in jsonReturn.lines)
             {
-                richTextBox1.Text = richTextBox1.Text + c.name + ": " + c.chaosValue + " c / " + String.Format("{0:0.00}", c.exaltedValue) + " Ex\n";
+                richTextBox1.Text = richTextBox1.Text + c.name + ": " + c.chaosValue + " c / " + String.Format("{0:0.00}", c.chaosValue / ChaosDivineRate) + " Ex\n";
 
                 ListViewItem test = new ListViewItem(c.name);
                 test.SubItems.Add(c.chaosValue.ToString());
-                test.SubItems.Add(String.Format("{0:0.00}", (c.exaltedValue)));
+                test.SubItems.Add(String.Format("{0:0.00}", (c.chaosValue / ChaosDivineRate)));
                 test.SubItems.Add(c.explicitModifiers[0].text);
                 listView1.Items.Add(test);
             }
@@ -1239,16 +1289,16 @@ namespace Deti_PoE_ToolBox
             listView1.Columns.Clear();
             listView1.Columns.Add("Name");
             listView1.Columns.Add("Chaos Value");
-            listView1.Columns.Add("Exalted Value");
+            listView1.Columns.Add("Divine Value");
             //  listView1.Columns.Add("Description");                 test.SubItems.Add(c.explicitModifiers[0].text);
 
             foreach (var c in jsonReturn.lines)
             {
-                richTextBox1.Text = richTextBox1.Text + c.name + ": " + c.chaosValue + " c / " + String.Format("{0:0.00}", c.exaltedValue) + " Ex\n";
+                richTextBox1.Text = richTextBox1.Text + c.name + ": " + c.chaosValue + " c / " + String.Format("{0:0.00}", c.chaosValue / ChaosDivineRate) + " Ex\n";
 
                 ListViewItem test = new ListViewItem(c.name);
                 test.SubItems.Add(c.chaosValue.ToString());
-                test.SubItems.Add(String.Format("{0:0.00}", (c.exaltedValue)));
+                test.SubItems.Add(String.Format("{0:0.00}", (c.chaosValue / ChaosDivineRate)));
 
                 listView1.Items.Add(test);
             }
@@ -1270,16 +1320,16 @@ namespace Deti_PoE_ToolBox
             listView1.Columns.Clear();
             listView1.Columns.Add("Name");
             listView1.Columns.Add("Chaos Value");
-            listView1.Columns.Add("Exalted Value");
+            listView1.Columns.Add("Divine Value");
             listView1.Columns.Add("Description");
 
             foreach (var c in jsonReturn.lines)
             {
-                richTextBox1.Text = richTextBox1.Text + c.name + ": " + c.chaosValue + " c / " + String.Format("{0:0.00}", c.exaltedValue) + " Ex\n";
+                richTextBox1.Text = richTextBox1.Text + c.name + ": " + c.chaosValue + " c / " + String.Format("{0:0.00}", c.chaosValue / ChaosDivineRate) + " Ex\n";
 
                 ListViewItem test = new ListViewItem(c.name);
                 test.SubItems.Add(c.chaosValue.ToString());
-                test.SubItems.Add(String.Format("{0:0.00}", (c.exaltedValue)));
+                test.SubItems.Add(String.Format("{0:0.00}", (c.chaosValue / ChaosDivineRate)));
                 test.SubItems.Add(c.explicitModifiers[0].text);
                 listView1.Items.Add(test);
             }
@@ -1492,7 +1542,7 @@ namespace Deti_PoE_ToolBox
             listView1.Columns.Add("Level");
             listView1.Columns.Add("Tier");
             listView1.Columns.Add("Chaos Value");
-            listView1.Columns.Add("Exalted Value");
+            listView1.Columns.Add("Divine Value");
             listView1.Columns.Add("Description");
 
             getSeedInput getInput = new getSeedInput();
@@ -1508,13 +1558,13 @@ namespace Deti_PoE_ToolBox
                     {
                         if (c.levelRequired < 76)
                         { 
-                            richTextBox1.Text = richTextBox1.Text + c.name + ": " + c.chaosValue + " c / " + String.Format("{0:0.00}", c.exaltedValue) + " Ex\n";
+                            richTextBox1.Text = richTextBox1.Text + c.name + ": " + c.chaosValue + " c / " + String.Format("{0:0.00}", c.chaosValue / ChaosDivineRate) + " Ex\n";
 
                             ListViewItem test = new ListViewItem(c.name);
                             test.SubItems.Add(c.levelRequired.ToString());
                             test.SubItems.Add(c.mapTier.ToString());
                             test.SubItems.Add(c.chaosValue.ToString());
-                            test.SubItems.Add(String.Format("{0:0.00}", (c.exaltedValue)));
+                            test.SubItems.Add(String.Format("{0:0.00}", (c.chaosValue / ChaosDivineRate)));
                             test.SubItems.Add(c.explicitModifiers[0].text);
                             listView1.Items.Add(test);
                         }
@@ -1526,13 +1576,13 @@ namespace Deti_PoE_ToolBox
                     {
                         if (c.levelRequired >= 76)
                         {
-                            richTextBox1.Text = richTextBox1.Text + c.name + ": " + c.chaosValue + " c / " + String.Format("{0:0.00}", c.exaltedValue) + " Ex\n";
+                            richTextBox1.Text = richTextBox1.Text + c.name + ": " + c.chaosValue + " c / " + String.Format("{0:0.00}", c.chaosValue / ChaosDivineRate) + " Ex\n";
 
                             ListViewItem test = new ListViewItem(c.name);
                             test.SubItems.Add(c.levelRequired.ToString());
                             test.SubItems.Add(c.mapTier.ToString());
                             test.SubItems.Add(c.chaosValue.ToString());
-                            test.SubItems.Add(String.Format("{0:0.00}", (c.exaltedValue)));
+                            test.SubItems.Add(String.Format("{0:0.00}", (c.chaosValue / ChaosDivineRate)));
                             test.SubItems.Add(c.explicitModifiers[0].text);
                             listView1.Items.Add(test);
                         }
