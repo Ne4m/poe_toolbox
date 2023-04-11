@@ -151,7 +151,6 @@
       <DependentUpon>GetUserInput.cs</DependentUpon>
     </Compile>
     <Compile Include="JStructure.cs" />
-    <Compile Include="JStructure_New.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="seedsJS.cs" />
