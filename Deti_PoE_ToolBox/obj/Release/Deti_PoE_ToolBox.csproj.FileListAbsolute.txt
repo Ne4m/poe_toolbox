@@ -74,3 +74,42 @@ C:\Users\Deti\source\repos\Deti Poe Toolbox\poe_toolbox\Deti_PoE_ToolBox\obj\Rel
 C:\Users\Deti\source\repos\Deti Poe Toolbox\poe_toolbox\Deti_PoE_ToolBox\obj\Release\Deti_PoE_ToolBox.csproj.CopyComplete
 C:\Users\Deti\source\repos\Deti Poe Toolbox\poe_toolbox\Deti_PoE_ToolBox\obj\Release\Deti Poe ToolBox.exe
 C:\Users\Deti\source\repos\Deti Poe Toolbox\poe_toolbox\Deti_PoE_ToolBox\obj\Release\Deti Poe ToolBox.pdb
+D:\Unity Projects\poe_toolbox\Deti_PoE_ToolBox\bin\Release\currency.json
+D:\Unity Projects\poe_toolbox\Deti_PoE_ToolBox\bin\Release\Deti Poe ToolBox.exe.config
+D:\Unity Projects\poe_toolbox\Deti_PoE_ToolBox\bin\Release\Deti Poe ToolBox.exe
+D:\Unity Projects\poe_toolbox\Deti_PoE_ToolBox\bin\Release\Deti Poe ToolBox.pdb
+D:\Unity Projects\poe_toolbox\Deti_PoE_ToolBox\bin\Release\Microsoft.Web.Helpers.dll
+D:\Unity Projects\poe_toolbox\Deti_PoE_ToolBox\bin\Release\Microsoft.Web.Infrastructure.dll
+D:\Unity Projects\poe_toolbox\Deti_PoE_ToolBox\bin\Release\Newtonsoft.Json.dll
+D:\Unity Projects\poe_toolbox\Deti_PoE_ToolBox\bin\Release\System.Web.Helpers.dll
+D:\Unity Projects\poe_toolbox\Deti_PoE_ToolBox\bin\Release\System.Web.Razor.dll
+D:\Unity Projects\poe_toolbox\Deti_PoE_ToolBox\bin\Release\System.Web.WebPages.Deployment.dll
+D:\Unity Projects\poe_toolbox\Deti_PoE_ToolBox\bin\Release\System.Web.WebPages.dll
+D:\Unity Projects\poe_toolbox\Deti_PoE_ToolBox\bin\Release\System.Web.WebPages.Razor.dll
+D:\Unity Projects\poe_toolbox\Deti_PoE_ToolBox\bin\Release\WebMatrix.Data.dll
+D:\Unity Projects\poe_toolbox\Deti_PoE_ToolBox\bin\Release\WebMatrix.WebData.dll
+D:\Unity Projects\poe_toolbox\Deti_PoE_ToolBox\bin\Release\Newtonsoft.Json.xml
+D:\Unity Projects\poe_toolbox\Deti_PoE_ToolBox\bin\Release\System.Web.Helpers.xml
+D:\Unity Projects\poe_toolbox\Deti_PoE_ToolBox\bin\Release\System.Web.Razor.xml
+D:\Unity Projects\poe_toolbox\Deti_PoE_ToolBox\bin\Release\System.Web.WebPages.xml
+D:\Unity Projects\poe_toolbox\Deti_PoE_ToolBox\bin\Release\System.Web.WebPages.Deployment.xml
+D:\Unity Projects\poe_toolbox\Deti_PoE_ToolBox\bin\Release\System.Web.WebPages.Razor.xml
+D:\Unity Projects\poe_toolbox\Deti_PoE_ToolBox\bin\Release\WebMatrix.Data.xml
+D:\Unity Projects\poe_toolbox\Deti_PoE_ToolBox\bin\Release\WebMatrix.WebData.xml
+D:\Unity Projects\poe_toolbox\Deti_PoE_ToolBox\obj\Release\Deti_PoE_ToolBox.csproj.AssemblyReference.cache
+D:\Unity Projects\poe_toolbox\Deti_PoE_ToolBox\obj\Release\Deti_PoE_ToolBox.csproj.SuggestedBindingRedirects.cache
+D:\Unity Projects\poe_toolbox\Deti_PoE_ToolBox\obj\Release\Deti_PoE_ToolBox.AdvancedBaseChecker.resources
+D:\Unity Projects\poe_toolbox\Deti_PoE_ToolBox\obj\Release\Deti_PoE_ToolBox.AdvencedConversionForm.resources
+D:\Unity Projects\poe_toolbox\Deti_PoE_ToolBox\obj\Release\Deti_PoE_ToolBox.DetailedMapPrices.resources
+D:\Unity Projects\poe_toolbox\Deti_PoE_ToolBox\obj\Release\Deti_Poe_ToolBox.divCardAnalyze.resources
+D:\Unity Projects\poe_toolbox\Deti_PoE_ToolBox\obj\Release\Deti_PoE_ToolBox.Form1.resources
+D:\Unity Projects\poe_toolbox\Deti_PoE_ToolBox\obj\Release\Deti_PoE_ToolBox.Form2.resources
+D:\Unity Projects\poe_toolbox\Deti_PoE_ToolBox\obj\Release\Deti_PoE_ToolBox.Form3.resources
+D:\Unity Projects\poe_toolbox\Deti_PoE_ToolBox\obj\Release\Deti_Poe_ToolBox.getSeedInput.resources
+D:\Unity Projects\poe_toolbox\Deti_PoE_ToolBox\obj\Release\Deti_PoE_ToolBox.GetUserInput.resources
+D:\Unity Projects\poe_toolbox\Deti_PoE_ToolBox\obj\Release\Deti_Poe_ToolBox.Properties.Resources.resources
+D:\Unity Projects\poe_toolbox\Deti_PoE_ToolBox\obj\Release\Deti_PoE_ToolBox.csproj.GenerateResource.cache
+D:\Unity Projects\poe_toolbox\Deti_PoE_ToolBox\obj\Release\Deti_PoE_ToolBox.csproj.CoreCompileInputs.cache
+D:\Unity Projects\poe_toolbox\Deti_PoE_ToolBox\obj\Release\Deti_PoE_ToolBox.csproj.CopyComplete
+D:\Unity Projects\poe_toolbox\Deti_PoE_ToolBox\obj\Release\Deti Poe ToolBox.exe
+D:\Unity Projects\poe_toolbox\Deti_PoE_ToolBox\obj\Release\Deti Poe ToolBox.pdb

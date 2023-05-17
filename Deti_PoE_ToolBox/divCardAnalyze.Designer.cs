@@ -42,17 +42,19 @@
             // 
             // divCards_low
             // 
-            this.divCards_low.Location = new System.Drawing.Point(12, 33);
+            this.divCards_low.Location = new System.Drawing.Point(16, 41);
+            this.divCards_low.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.divCards_low.Name = "divCards_low";
-            this.divCards_low.Size = new System.Drawing.Size(700, 146);
+            this.divCards_low.Size = new System.Drawing.Size(932, 179);
             this.divCards_low.TabIndex = 0;
             this.divCards_low.Text = "";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(340, 551);
+            this.button1.Location = new System.Drawing.Point(453, 678);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(100, 28);
             this.button1.TabIndex = 1;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
@@ -63,28 +65,31 @@
             this.lowTierlbl.AutoSize = true;
             this.lowTierlbl.BackColor = System.Drawing.Color.DodgerBlue;
             this.lowTierlbl.ForeColor = System.Drawing.Color.Silver;
-            this.lowTierlbl.Location = new System.Drawing.Point(290, 17);
+            this.lowTierlbl.Location = new System.Drawing.Point(387, 21);
+            this.lowTierlbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lowTierlbl.Name = "lowTierlbl";
-            this.lowTierlbl.Size = new System.Drawing.Size(124, 13);
+            this.lowTierlbl.Size = new System.Drawing.Size(148, 16);
             this.lowTierlbl.TabIndex = 2;
-            this.lowTierlbl.Text = "LOW TIER CARDS < 2c";
+            this.lowTierlbl.Text = "LOW TIER CARDS < 3c";
             // 
             // medTierlbl
             // 
             this.medTierlbl.AutoSize = true;
             this.medTierlbl.BackColor = System.Drawing.Color.DodgerBlue;
             this.medTierlbl.ForeColor = System.Drawing.Color.Silver;
-            this.medTierlbl.Location = new System.Drawing.Point(290, 195);
+            this.medTierlbl.Location = new System.Drawing.Point(387, 240);
+            this.medTierlbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.medTierlbl.Name = "medTierlbl";
-            this.medTierlbl.Size = new System.Drawing.Size(125, 13);
+            this.medTierlbl.Size = new System.Drawing.Size(150, 16);
             this.medTierlbl.TabIndex = 4;
-            this.medTierlbl.Text = "MID TIER CARDS < 10c";
+            this.medTierlbl.Text = "MID TIER CARDS 3-10c";
             // 
             // divCards_med
             // 
-            this.divCards_med.Location = new System.Drawing.Point(12, 211);
+            this.divCards_med.Location = new System.Drawing.Point(16, 260);
+            this.divCards_med.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.divCards_med.Name = "divCards_med";
-            this.divCards_med.Size = new System.Drawing.Size(700, 146);
+            this.divCards_med.Size = new System.Drawing.Size(932, 179);
             this.divCards_med.TabIndex = 3;
             this.divCards_med.Text = "";
             // 
@@ -93,25 +98,28 @@
             this.highTierlbl.AutoSize = true;
             this.highTierlbl.BackColor = System.Drawing.Color.DodgerBlue;
             this.highTierlbl.ForeColor = System.Drawing.Color.Silver;
-            this.highTierlbl.Location = new System.Drawing.Point(290, 372);
+            this.highTierlbl.Location = new System.Drawing.Point(387, 458);
+            this.highTierlbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.highTierlbl.Name = "highTierlbl";
-            this.highTierlbl.Size = new System.Drawing.Size(132, 13);
+            this.highTierlbl.Size = new System.Drawing.Size(158, 16);
             this.highTierlbl.TabIndex = 6;
             this.highTierlbl.Text = "HIGH TIER CARDS > 10c";
             // 
             // divCards_high
             // 
-            this.divCards_high.Location = new System.Drawing.Point(12, 388);
+            this.divCards_high.Location = new System.Drawing.Point(16, 478);
+            this.divCards_high.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.divCards_high.Name = "divCards_high";
-            this.divCards_high.Size = new System.Drawing.Size(700, 146);
+            this.divCards_high.Size = new System.Drawing.Size(932, 179);
             this.divCards_high.TabIndex = 5;
             this.divCards_high.Text = "";
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(719, 33);
+            this.button2.Location = new System.Drawing.Point(959, 41);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(22, 146);
+            this.button2.Size = new System.Drawing.Size(29, 180);
             this.button2.TabIndex = 7;
             this.button2.Text = "C";
             this.button2.UseVisualStyleBackColor = true;
@@ -119,9 +127,10 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(719, 211);
+            this.button3.Location = new System.Drawing.Point(959, 260);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(22, 146);
+            this.button3.Size = new System.Drawing.Size(29, 180);
             this.button3.TabIndex = 8;
             this.button3.Text = "C";
             this.button3.UseVisualStyleBackColor = true;
@@ -129,9 +138,10 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(719, 388);
+            this.button4.Location = new System.Drawing.Point(959, 478);
+            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(22, 146);
+            this.button4.Size = new System.Drawing.Size(29, 180);
             this.button4.TabIndex = 9;
             this.button4.Text = "C";
             this.button4.UseVisualStyleBackColor = true;
@@ -139,10 +149,10 @@
             // 
             // divCardAnalyze
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
-            this.ClientSize = new System.Drawing.Size(757, 551);
+            this.ClientSize = new System.Drawing.Size(1009, 678);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -153,6 +163,7 @@
             this.Controls.Add(this.lowTierlbl);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.divCards_low);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "divCardAnalyze";
             this.Text = "Div Cards Analyze For Item Filters";
             this.Load += new System.EventHandler(this.divCardAnalyze_Load);

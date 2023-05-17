@@ -99,12 +99,12 @@ namespace Deti_Poe_ToolBox
                 if (!blackList.Contains(c.name))
                 {
 
-                    if (c.chaosValue < 2)
+                    if (c.chaosValue < 3)
                     {
                         divCards_low.Text += "\"" + c.name + "\"" + " ";
                     }
 
-                    if (c.chaosValue >= 2 && c.chaosValue < 10)
+                    if (c.chaosValue >= 3 && c.chaosValue < 10)
                     {
                         divCards_med.Text += "\"" + c.name + "\"" + " ";
                     }
